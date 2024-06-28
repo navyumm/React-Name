@@ -1,79 +1,103 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+## What is React Native
+- Framework for Develop Android and IOS Apps.
+- Written in javaScript with Reach js.
+- It will convert code to native apps.
+- Current Version : 
+- Initial release date: 26 March, 2015 
 
-# Getting Started
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+## Why learn React-Native
+- Make Android, ios, and many more platforms app
+- High demand.
+- Easy to learn and develop apps
+- If you know react js, you can easily learn RN
+- Maintained by Facebook so this is a long term player
 
-## Step 1: Start the Metro Server
+## Main Topics of Course
+- Set up and instal react-Native
+- React-Native Basics
+- Components
+- Hooks and lifecycle
+- Navigation
+- Handle list
+- Form handling
+- Rest APIs
+- Redux
+- Project
+- Internet questions 
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+## React native set up in windows
+- We will follow official docs for RN Setup
+- Instal Choco, Node and Jdk
+- Instal Android studio
+- Download Jdk and emulator
+- Add environment variables
+- Create reactinative app
+- Run app 
 
-To start Metro, run the following command from the _root_ of your React Native project:
+## Make First Progrann
+- How to start App again.
+- Make ther First 
+- Just keep simplest Code in
 
-```bash
-# using npm
-npm start
+## React-Native App File Structure
+- Important files for Beginners.
+- Explain files and folder.
 
-# OR using Yarn
-yarn start
-```
+### Important to know files
+- package.json                     :         It's holds whole project info
+- package-lock.json                :         ye kisi package ke depedencies ki bhi dependencies rakha hai apne paas, hirerciy form mr 
+- metro config file                :         fast reloading or compile
+- babel config file                :         isme hum naye version ko purane se replace kar sakte hai, taaki project me issue na aaye
+- index.js                         :         Entry point of javaScript where we can register our components.
+- app.js                           :         It's our first components
+- eslintrc.js                      :         Isme hum ecma script se related agar kuch karwana hai to yaha likhte h
+- ios and android folder           :         code ko android or iso ke andr compile karo and jab built bnate hai uss time javaScript ke code ko native me convert kar deti hai
+- node modules                      :         total jinte bhi package humare application vo sab yaha npde module me hoye hai
 
-## Step 2: Start your Application
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
 
-### For Android
+- Gemfile                           :        ye ruby ke liye bani hoti hai ( jab hume application ko debug karna hota tab ruby kaam me aati hai )
 
-```bash
-# using npm
-npm run android
+- watchman-mettro                   :        ye dono ek sath ksrte haai
 
-# OR using Yarn
-yarn android
-```
+watchman check karta hai ky humari application me kuch change hua means watchmenas changes ksrta hai or
+metro usko load ya implkement karta hai
 
-### For iOS
+pakage.js hmari application ki informmation rakhta h and
+pakage-lock.js hmari application ki depedencies ki information rakhta hai
 
-```bash
-# using npm
-npm run ios
+---
 
-# OR using Yarn
-yarn ios
-```
+## View, Text and Button
+- Understand App.js code,
+- Example of View, Text and Button
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+## JSX (Power House of React-Native)
+- What is JSX ( javaScript Extension  ) : it allow us to write HTML code in javaScript
+- Example 0f JSX
+- Interesting fact about JSX ( kahi jagah pr iski full form javaScript xml likhi hui hai but jab hum officially site pr jaate hai waha aisa kuch nhi hai)
 
-## Step 3: Modifying your App
+- inke andr hum bss function ko call kar sakte hai bna nhi sakte
 
-Now that you have successfully run the app, let's modify it.
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+## Components in React Native
+- What are Components?
+    - Independent and resusable code such as function.
+    - Two Types of Components
+        - Class Components
+        - Functional Components
+- Example of Component.
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+- Note : fuction me hum html nhi likh sakte jabki components me use kar sakte hai. like: button, radiobutton etc.. And
+- function ka first letter hum capital likhe ya na likhe farq nhi padhta but in components we need to write first letter always capital
 
-## Congratulations! :tada:
 
-You've successfully run and modified your React Native App. :partying_face:
+## Button and onPress event
+- How to make a button.
+- Change the color of thr button
+- Call function on button press
+- Pass data to function from event
 
-### Now what?
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
