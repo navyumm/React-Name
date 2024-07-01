@@ -101,3 +101,16 @@ pakage-lock.js hmari application ki depedencies ki information rakhta hai
 - Pass data to function from event
 
 
+## State In React-Native
+- What is the State?
+- Example of state
+- How to Update State?
+- Difference between state and variable?
+
+** Explanation : Jaise variable me hum data ko store karte hai same State me bhi hum data ko store karte hai. But jab hum variable me data ko store karte hai toh component re-render nhi hota whereas, jab hum components me data store karte hai toh pura component fir se re- render hota hai.
+
+** State ko hum outside component use nhi kar sakte. like : agar humare pass 4 components hai. Aur humne phle waale component me koi state define kardi. to ye state ko hum kisi dusre function me use nhi ksr dske.
+
+
+
+

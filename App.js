@@ -1,52 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button, Text, View } from 'react-native';
-import CompanyData from './components/CompanyData';
-
-
-let age = 18;
-var email = "abc@test.com"
-
-function fruit() {
-  return "apple";
-}
 
 const App = () => {
 
-  let data = 20;
-  const color = () => {
-    data = 10;
-    console.warn(data)
-  }
-  
+const [name, setName] = useState("Navyum");
+let data = "gogii"
+
+const testName = () => {
+  setName("Navy");
+  data = "gogigogi"
+}
 
   return (
     <View>
-      {/* <UserData /> */}
-      <Text style={{ fontSize: 30, fontWeight:'800' }}>Components</Text>
-      <Text style={{ fontSize: 30, fontWeight:'800' }}>{data}</Text>
-      {/* <CompanyData /> */}
-
+      <Text style={{ fontSize: 30, fontWeight:'800' }}>state in RN</Text>
+      <Text style={{ fontSize: 20 }}>{name}</Text>
       <Button 
-        title='on press'
-        color={'green'}
-        onPress={() => color()}
+        title='update name'
+        onPress={() => setName('Nav')}
+      />
+      <Button 
+        title='update me'
+        onPress={testName}
       />
     </View> 
   );
 }
-
-// const UserData = () => {
-//   return (
-//     <View>
-//       <Text style={{ fontSize: 30 }}>Name : Navi</Text>
-//       <Text style={{ fontSize: 30 }}>Age : 24</Text>
-//       <Text style={{ fontSize: 30 }}>Email : test@google.com</Text>
-
-
-
-//     </View>
-//   )
-// }
 
 
 
