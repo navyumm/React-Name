@@ -101,26 +101,102 @@ import ExStyles from './style'
 
 
 // Handle Text Input 
+// {
+// const App = () => {
+//   const [name, setName] = useState("")
+
+//   return (
+//     <View>
+//       <Text style={{ fontSize: 30 }}>InputText in RN</Text>
+//       <Text style={{ fontSize: 30 }}>Your name is : {name}</Text>
+
+//       <TextInput
+//         style={{ height: 40, borderColor: 'gray', borderWidth: 1 }}
+//         placeholder='enter your name'
+//         value={name}
+//         onChangeText={(text) => setName(text)}
+//       />
+//       <Button 
+//         title='clear Input Valur'
+//         onPress={() => setName("")}
+//       />
+//     </View>
+//   )
+// }
+// }
+
+
+// Simple Form
+
 const App = () => {
   const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+  const [display, setDisplay] = useState(false)
+
+  const resetFormData = () => {
+    setDisplay(false);
+    setEmail("")
+    setName("")
+    setPassword("")
+  }
+
 
   return (
     <View>
-      <Text style={{ fontSize: 30 }}>InputText in RN</Text>
-      <Text style={{ fontSize: 30 }}>Your name is : {name}</Text>
+      <Text style={{ fontSize: 30 }}>Simple Form in RN</Text>
+      <TextInput
+        style={{ height: 40, borderColor: 'gray', borderWidth: 1 }}
+        placeholder='enter User Name'
+        onChangeText={(text) => setName(text)}
+        value={name}
+      />
 
       <TextInput
         style={{ height: 40, borderColor: 'gray', borderWidth: 1 }}
-        placeholder='enter your name'
-        value={name}
-        onChangeText={(text) => setName(text)}
+        placeholder='enter User Email'
+        onChangeText={(text) => setEmail(text)}
+        value={email}
       />
-      <Button 
-        title='clear Input Valur'
-        onPress={() => setName("")}
+
+      <TextInput
+        style={{ height: 40, borderColor: 'gray', borderWidth: 1 }}
+        placeholder='enter User Password'
+        onChangeText={(text) => setPassword(text)}
+        value={password}
+        secureTextEntry={true}
       />
+
+      <View style={{marginBottom:10}}>
+        <Button
+          title='Print details'
+          onPress={() => setDisplay(true)}
+        />
+      </View>
+
+      <View>
+        <Button
+          title='Clear details'
+          onPress={resetFormData}
+        />
+      </View>
+
+      <View>
+        {
+          display ? 
+          <View>
+            <Text style={{fontSize:25}}>Username: {name}</Text>
+            <Text style={{fontSize:25}}>Email: {email}</Text>
+            <Text style={{fontSize:25}}>Password: {password}</Text>
+          </View>
+          : null
+        }
+      </View>
+
     </View>
   )
 }
+
+
 
 export default App

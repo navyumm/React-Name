@@ -141,4 +141,8 @@ pakage-lock.js hmari application ki depedencies ki information rakhta hai
 - Clear Text Input value.
 
 
-
+## Simple Form in RN
+- Make Text Inputs and Button.
+- Make States for every Text Input.
+- Get Text Input value in State.
+- Print Value on Button Click
