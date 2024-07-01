@@ -134,6 +134,11 @@ pakage-lock.js hmari application ki depedencies ki information rakhta hai
 - Important style properties
 
 
+## Get Text Input Value (Handling Text Input)
+- Make Text Input and define the state.
+- Apply Style in Text input.
+- Get Text Input value on Change.
+- Clear Text Input value.
 
 
 

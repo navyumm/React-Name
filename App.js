@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, StyleSheet, Text, View } from 'react-native';
+import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
 import ExStyles from './style'
 
 
@@ -68,34 +68,59 @@ import ExStyles from './style'
 
 
 // Styles
-const App = () => {
+// {
+// const App = () => {
 
-  return(
+//   return(
+//     <View>
+//       <Text style={{ fontSize: 30 }}>Styles in RN</Text>
+//       <Text style={{ fontSize: 30 }}>Styles in RN</Text>
+//       <Text style={styles.textbox}>Styles in RN</Text>
+//       <Text style={ExStyles.textbox}>Styles in RN</Text>
+//       <Text style={[styles.textbox, ExStyles.textbox, {marginTop:20}]}>Styles in RN</Text>
+//     </View>
+//   )
+// }
+
+// const styles = StyleSheet.create ({
+//   textbox: {
+//     color: '#fff',
+//     fontSize:25,
+//     backgroundColor: 'blue',
+//     marginBottom: 10,
+//     padding: 10,
+//     borderRadius: 10,
+//     textAlign: 'center',
+//     height: 100,
+//     textAlignVertical: 'center',
+//     borderColor:'red',
+//     borderWidth: 2
+//   }
+// })
+// }
+
+
+// Handle Text Input 
+const App = () => {
+  const [name, setName] = useState("")
+
+  return (
     <View>
-      <Text style={{ fontSize: 30 }}>Styles in RN</Text>
-      <Text style={{ fontSize: 30 }}>Styles in RN</Text>
-      <Text style={styles.textbox}>Styles in RN</Text>
-      <Text style={ExStyles.textbox}>Styles in RN</Text>
-      <Text style={[styles.textbox, ExStyles.textbox, {marginTop:20}]}>Styles in RN</Text>
+      <Text style={{ fontSize: 30 }}>InputText in RN</Text>
+      <Text style={{ fontSize: 30 }}>Your name is : {name}</Text>
+
+      <TextInput
+        style={{ height: 40, borderColor: 'gray', borderWidth: 1 }}
+        placeholder='enter your name'
+        value={name}
+        onChangeText={(text) => setName(text)}
+      />
+      <Button 
+        title='clear Input Valur'
+        onPress={() => setName("")}
+      />
     </View>
   )
 }
-
-const styles = StyleSheet.create ({
-  textbox: {
-    color: '#fff',
-    fontSize:25,
-    backgroundColor: 'blue',
-    marginBottom: 10,
-    padding: 10,
-    borderRadius: 10,
-    textAlign: 'center',
-    height: 100,
-    textAlignVertical: 'center',
-    borderColor:'red',
-    borderWidth: 2
-  }
-})
-
 
 export default App
