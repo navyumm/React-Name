@@ -126,6 +126,14 @@ pakage-lock.js hmari application ki depedencies ki information rakhta hai
 - Answer is : yes we can. but uske liye ek alg method use hota hai that's called lifting up state.
 
 
+## Basic Style in RN
+- Style-Type in RN
+- inline style
+- internal    
+- external    
+- Important style properties
+
+
 
 
 
