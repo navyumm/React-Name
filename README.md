@@ -112,5 +112,20 @@ pakage-lock.js hmari application ki depedencies ki information rakhta hai
 ** State ko hum outside component use nhi kar sakte. like : agar humare pass 4 components hai. Aur humne phle waale component me koi state define kardi. to ye state ko hum kisi dusre function me use nhi ksr dske.
 
 
+## Props in React-Native
+- What are Props? (Properties)
+    - ye basically arguments or parameters hote hai humre components ke,
+    - jaise fn me hum arguments and parameter paas karte hsi. data share ke liye.
+    - similarly jab hume ek component se dusre component me data send karna hota hai, tab hum props paas karte hai    
+- Examples
+- Difference between State and Props?
+    - State is used to store data inside the component.
+    - Props are used to pass data from one component to another component.
+
+- Question is : kya hum child component se parent component me data ko le sakte hai?
+- Answer is : yes we can. but uske liye ek alg method use hota hai that's called lifting up state.
+
+
+
 
 
