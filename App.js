@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Button, FlatList, StyleSheet, Text, TextInput, View } from 'react-native';
 import ExStyles from './style'
 
 
@@ -127,76 +127,122 @@ import ExStyles from './style'
 
 
 // Simple Form
+// {
+// const App = () => {
+//   const [name, setName] = useState("")
+//   const [email, setEmail] = useState("")
+//   const [password, setPassword] = useState("")
+//   const [display, setDisplay] = useState(false)
+
+//   const resetFormData = () => {
+//     setDisplay(false);
+//     setEmail("")
+//     setName("")
+//     setPassword("")
+//   }
+
+
+//   return (
+//     <View>
+//       <Text style={{ fontSize: 30 }}>Simple Form in RN</Text>
+//       <TextInput
+//         style={{ height: 40, borderColor: 'gray', borderWidth: 1 }}
+//         placeholder='enter User Name'
+//         onChangeText={(text) => setName(text)}
+//         value={name}
+//       />
+
+//       <TextInput
+//         style={{ height: 40, borderColor: 'gray', borderWidth: 1 }}
+//         placeholder='enter User Email'
+//         onChangeText={(text) => setEmail(text)}
+//         value={email}
+//       />
+
+//       <TextInput
+//         style={{ height: 40, borderColor: 'gray', borderWidth: 1 }}
+//         placeholder='enter User Password'
+//         onChangeText={(text) => setPassword(text)}
+//         value={password}
+//         secureTextEntry={true}
+//       />
+
+//       <View style={{marginBottom:10}}>
+//         <Button
+//           title='Print details'
+//           onPress={() => setDisplay(true)}
+//         />
+//       </View>
+
+//       <View>
+//         <Button
+//           title='Clear details'
+//           onPress={resetFormData}
+//         />
+//       </View>
+
+//       <View>
+//         {
+//           display ? 
+//           <View>
+//             <Text style={{fontSize:25}}>Username: {name}</Text>
+//             <Text style={{fontSize:25}}>Email: {email}</Text>
+//             <Text style={{fontSize:25}}>Password: {password}</Text>
+//           </View>
+//           : null
+//         }
+//       </View>
+
+//     </View>
+//   )
+// }
+// }
+
+
+// List 
+
+const users = [
+  {
+    id: 1,
+    name: 'John',
+  },
+  {
+    id: 2,
+    name: 'cina',
+  },
+  {
+    id: 3,
+    name: 'no',
+  },
+  {
+    id: 4,
+    name: 'bita',
+  }
+]
+
 
 const App = () => {
-  const [name, setName] = useState("")
-  const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
-  const [display, setDisplay] = useState(false)
-
-  const resetFormData = () => {
-    setDisplay(false);
-    setEmail("")
-    setName("")
-    setPassword("")
-  }
-
-
   return (
     <View>
-      <Text style={{ fontSize: 30 }}>Simple Form in RN</Text>
-      <TextInput
-        style={{ height: 40, borderColor: 'gray', borderWidth: 1 }}
-        placeholder='enter User Name'
-        onChangeText={(text) => setName(text)}
-        value={name}
+      <Text style={{ fontSize: 30 }}>List with Flatlist Component</Text>
+      <FlatList 
+        data={users}    // ye array me hi hoga
+        renderItem={({item})=><Text style={styles.item}>{item.name}</Text>}  // ye data ko render kar dega
+        keyExtractor={(item)=>item.id}   // ye kisi unique ke liye work me lete hai
       />
-
-      <TextInput
-        style={{ height: 40, borderColor: 'gray', borderWidth: 1 }}
-        placeholder='enter User Email'
-        onChangeText={(text) => setEmail(text)}
-        value={email}
-      />
-
-      <TextInput
-        style={{ height: 40, borderColor: 'gray', borderWidth: 1 }}
-        placeholder='enter User Password'
-        onChangeText={(text) => setPassword(text)}
-        value={password}
-        secureTextEntry={true}
-      />
-
-      <View style={{marginBottom:10}}>
-        <Button
-          title='Print details'
-          onPress={() => setDisplay(true)}
-        />
-      </View>
-
-      <View>
-        <Button
-          title='Clear details'
-          onPress={resetFormData}
-        />
-      </View>
-
-      <View>
-        {
-          display ? 
-          <View>
-            <Text style={{fontSize:25}}>Username: {name}</Text>
-            <Text style={{fontSize:25}}>Email: {email}</Text>
-            <Text style={{fontSize:25}}>Password: {password}</Text>
-          </View>
-          : null
-        }
-      </View>
-
     </View>
   )
-}
+};
 
-
-
+const styles = StyleSheet.create({
+  item:{
+    fontSize:24,
+    padding:10,
+    color:"#fff",
+    backgroundColor: "blue",
+    borderColor: "black",
+    borderWidth:1,
+    margin:10
+  }
+})
 export default App
