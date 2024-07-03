@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, FlatList, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Button, FlatList, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 import ExStyles from './style'
 
 
@@ -200,7 +200,55 @@ import ExStyles from './style'
 
 
 // List 
+// {
+// const users = [
+//   {
+//     id: 1,
+//     name: 'John',
+//   },
+//   {
+//     id: 2,
+//     name: 'cina',
+//   },
+//   {
+//     id: 3,
+//     name: 'no',
+//   },
+//   {
+//     id: 4,
+//     name: 'bita',
+//   }
+// ]
 
+
+// const App = () => {
+//   return (
+//     <View>
+//       <Text style={{ fontSize: 30 }}>List with Flatlist Component</Text>
+//       <FlatList 
+//         data={users}    // ye array me hi hoga
+//         renderItem={({item})=><Text style={styles.item}>{item.name}</Text>}  // ye data ko render kar dega
+//         keyExtractor={(item)=>item.id}   // ye kisi unique ke liye work me lete hai
+//       />
+//     </View>
+//   )
+// };
+
+// const styles = StyleSheet.create({
+//   item:{
+//     fontSize:24,
+//     padding:10,
+//     color:"#fff",
+//     backgroundColor: "blue",
+//     borderColor: "black",
+//     borderWidth:1,
+//     margin:10
+//   }
+// })
+// }
+
+
+// Custom list
 const users = [
   {
     id: 1,
@@ -217,6 +265,26 @@ const users = [
   {
     id: 4,
     name: 'bita',
+  },
+  {
+    id: 4,
+    name: 'bita',
+  },
+  {
+    id: 4,
+    name: 'bita',
+  },
+  {
+    id: 4,
+    name: 'bita',
+  },
+  {
+    id: 4,
+    name: 'bita',
+  },
+  {
+    id: 4,
+    name: 'Rita',
   }
 ]
 
@@ -224,12 +292,12 @@ const users = [
 const App = () => {
   return (
     <View>
-      <Text style={{ fontSize: 30 }}>List with Flatlist Component</Text>
-      <FlatList 
-        data={users}    // ye array me hi hoga
-        renderItem={({item})=><Text style={styles.item}>{item.name}</Text>}  // ye data ko render kar dega
-        keyExtractor={(item)=>item.id}   // ye kisi unique ke liye work me lete hai
-      />
+      <Text style={{ fontSize: 30 }}>List with map function</Text>
+      <ScrollView style={{marginBottom:50}}>
+      {
+        users.map((item)=><Text style={styles.item}>{item.name}</Text>)
+      }
+      </ScrollView>
     </View>
   )
 };

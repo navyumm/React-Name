@@ -161,3 +161,18 @@ Question : how to make list?
 Question : FlatList ke andr hum jo bhi data hoga vo kis type ka hoga.
 
 Answer : normal array ki form me ya, array off objct
+
+## list with map functon (Custom)
+
+* Make an Array of users
+* Use map function for Create List.
+* Apply Style of List.
+* Need ScrollView to scroll list
+
+Question : Make a list without using any RN feature.
+
+Question : Jab hum map ka use karke list bna hi lete hai then, Why FlatList?
+
+Answer : Because FlatList me additional features hote hai, jissai hum list me Header or Footer bhi set kar sakte hai.
+
+Also FlatList me hum zyada data ke sath bhi aasani se kaam kar sakte hai but jab map ka use karenge toh scrolling lag hone lagegi.
