@@ -176,3 +176,13 @@ Question : Jab hum map ka use karke list bna hi lete hai then, Why FlatList?
 Answer : Because FlatList me additional features hote hai, jissai hum list me Header or Footer bhi set kar sakte hai.
 
 Also FlatList me hum zyada data ke sath bhi aasani se kaam kar sakte hai but jab map ka use karenge toh scrolling lag hone lagegi.
+
+## Make Dynamic Grid
+
+* Add Text Items for Static Grid
+* Add Style to make the grid
+* Make dynamic Grid
+
+Question : Explain Flex 1 means
+
+Answer : If we give someone flex 1 property which means that it will covers all the available space or you can say that it will become flexible according to the available space.
