@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Button, FlatList, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 import ExStyles from './style'
+import { UserData } from './components/UserData';
 
 
 
@@ -318,78 +319,154 @@ import ExStyles from './style'
 
 
 // Dynamic Grid
+// {
+// const users = [
+//   {
+//     id: 1,
+//     name: 'John',
+//   },
+//   {
+//     id: 2,
+//     name: 'cina',
+//   },
+//   {
+//     id: 3,
+//     name: 'no',
+//   },
+//   {
+//     id: 4,
+//     name: 'bita',
+//   },
+//   {
+//     id: 4,
+//     name: 'bita',
+//   },
+//   {
+//     id: 4,
+//     name: 'bita',
+//   },
+//   {
+//     id: 4,
+//     name: 'bita',
+//   },
+//   {
+//     id: 4,
+//     name: 'bita',
+//   },
+//   {
+//     id: 4,
+//     name: 'Rita',
+//   }
+// ]
+
+// const App = () => {
+//   return(
+//     <View>
+//       <Text style={{fontSize:30}}>Grid with Dynamic Data</Text>
+
+//       <View style={{flex:1, flexDirection:'row', flexWrap:'wrap'}}>
+//       {/* <Text style={style.item}>navi</Text>
+//       <Text style={style.item}>navi</Text>
+//       <Text style={style.item}>navi</Text>
+//       <Text style={style.item}>navi</Text>
+//       <Text style={style.item}>navi</Text> */}
+//       {
+//         users.map((item)=><Text style={style.item}>{item.name}</Text>)
+//       }
+//       </View>
+
+//     </View>
+//   )
+// }
+
+// const style = StyleSheet.create({
+//   item:{
+//     fontSize:24,
+//     padding:5,
+//     color:"#fff",
+//     backgroundColor: "blue",
+//     borderColor: "black",
+//     borderWidth:1,
+//     margin:5,
+//     width:120,
+//     height:120,
+//     textAlignVertical:'center',
+//     textAlign:'center'
+//   }
+// })
+// }
+
+
+// Component in loop Flatlist
 const users = [
   {
     id: 1,
     name: 'John',
+    email: 'test@gogi.com'
   },
   {
     id: 2,
     name: 'cina',
+    email: 'test@gogi.com'
   },
   {
     id: 3,
     name: 'no',
+    email: 'test@gogi.com'
   },
   {
     id: 4,
     name: 'bita',
-  },
-  {
-    id: 4,
-    name: 'bita',
-  },
-  {
-    id: 4,
-    name: 'bita',
-  },
-  {
-    id: 4,
-    name: 'bita',
-  },
-  {
-    id: 4,
-    name: 'bita',
-  },
-  {
-    id: 4,
-    name: 'Rita',
+    email: 'test@gogi.com'
   }
 ]
 
 const App = () => {
-  return(
+  return (
     <View>
-      <Text style={{fontSize:30}}>Grid with Dynamic Data</Text>
+      <Text style={{ fontSize: 30 }}>Component in loop Flatlist</Text>
 
-      <View style={{flex:1, flexDirection:'row', flexWrap:'wrap'}}>
-      {/* <Text style={style.item}>navi</Text>
-      <Text style={style.item}>navi</Text>
-      <Text style={style.item}>navi</Text>
-      <Text style={style.item}>navi</Text>
-      <Text style={style.item}>navi</Text> */}
-      {
-        users.map((item)=><Text style={style.item}>{item.name}</Text>)
-      }
-      </View>
+      <FlatList
+        data={users}
+        // renderItem={({ item }) => <View style={style.box}>
+        //   <Text style={style.item}>{item.name}</Text>
+        //   <Text style={style.item}>{item.email}</Text>
+        // </View>}
+        renderItem={({ item }) => <UserData item={item}/>}
+      />
+
 
     </View>
   )
 }
+// {
+// // const UserData = (props) => {
+// //   const { item } = props.item;
+// //   return (
+// //     <View style={style.box}>
+// //       <Text style={style.item}>{item.name}</Text>
+// //       <Text style={style.item}>{item.email}</Text>
+// //     </View>
+// //   )
+// // }
 
-const style = StyleSheet.create({
-  item:{
-    fontSize:24,
-    padding:5,
-    color:"#fff",
-    backgroundColor: "blue",
-    borderColor: "black",
-    borderWidth:1,
-    margin:5,
-    width:120,
-    height:120,
-    textAlignVertical:'center',
-    textAlign:'center'
-  }
-})
+// // const style = StyleSheet.create({
+// //   item: {
+// //     fontSize: 20,
+// //     margin: 10,
+// //     flex: 1,
+// //     margin: 2,
+// //     backgroundColor: 'orange',
+// //     textAlign: 'center'
+
+// //   },
+// //   box: {
+// //     flexDirection: 'row',
+// //     borderWidth: 2,
+// //     borderColor: 'black',
+// //     width: 100,
+// //     marginBottom: 10
+// //   }
+// // })
+// }
 export default App

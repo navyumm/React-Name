@@ -186,3 +186,16 @@ Also FlatList me hum zyada data ke sath bhi aasani se kaam kar sakte hai but jab
 Question : Explain Flex 1 means
 
 Answer : If we give someone flex 1 property which means that it will covers all the available space or you can say that it will become flexible according to the available space.
+
+## Component in Loop with Flatlist
+
+* Make List with FlatList and Array
+* Apply Style
+* Make Componet
+* Use Componet inside List
+
+Question : Are we able to use Custom component in FlatList?
+
+Question : How we pass props ?
+
+Question : Can we pass multiple props?
