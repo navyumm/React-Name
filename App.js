@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { Button, FlatList, ScrollView, SectionList, StyleSheet, Text, TextInput, TouchableHighlight, TouchableOpacity, View } from 'react-native';
+import { ActivityIndicator, Button, FlatList, ScrollView, SectionList, StyleSheet, Text, TextInput, TouchableHighlight, TouchableOpacity, View } from 'react-native';
 import ExStyles from './style'
 import { UserData } from './components/UserData';
 import Student from './components/ClassComponent';
+import style from './style';
 
 
 
@@ -872,97 +873,136 @@ import Student from './components/ClassComponent';
 // }
 
 
+// Dynamic Radio Button
+// {
+// const App = () => {
+
+//   const skills = [
+//     {
+//       id: 1,
+//       name: "Java"
+//     },
+//     {
+//       id: 2,
+//       name: "C++"
+//     },
+//     {
+//       id: 3,
+//       name: "C"
+//     },
+//     {
+//       id: 4,
+//       name: "Python"
+//     },
+//     {
+//       id: 5,
+//       name: "JavaScript"
+//     },
+//   ]
+
+//   const [selectedRadio, setSelectedRadio] = useState(1)
+//   return (
+//     <View style={style.main}>
+//       {
+//         skills.map((item, index) =>
+//           <TouchableOpacity
+//             key={index}
+//             onPress={() => setSelectedRadio(item.id)}
+//           >
+//             <View style={style.radioWrapper}>
+//               <View style={style.radio}>
+//                 {/* <View style={style.radioCircle}></View> */}
+//                 {
+//                   selectedRadio == item.id ? <View style={style.radioCircle}></View> : null
+//                 }
+//               </View>
+//               <Text style={style.radioText}>{item.name}</Text>
+//             </View>
+//           </TouchableOpacity>
+//         )
+//       }
+
+//     </View>
+//   )
+// }
+
+
+// const style = StyleSheet.create({
+//   main: {
+//     flex: 1,
+//     backgroundColor: 'red',
+//     justifyContent: 'center',
+//     alignItems: 'center',
+//   },
+//   radioText: {
+//     fontSize: 25
+//   },
+//   radio: {
+//     height: 40,
+//     width: 40,
+//     borderRadius: 20,
+//     borderWidth: 2,
+//     borderColor: 'black',
+//     backgroundColor: 'white',
+//     justifyContent: 'center',
+//     alignItems: 'center',
+//     margin: 10
+//   },
+//   radioWrapper: {
+//     flexDirection: 'row',
+//     justifyContent: 'center',
+//     alignItems: 'center',
+//     margin: 10
+//   },
+//   radioCircle: {
+//     height: 28,
+//     width: 28,
+//     borderRadius: 10,
+//     backgroundColor: 'black',
+//     margin: 4
+//   }
+// })
+// }
+
+
+// Activity Indicator (Loader)
 const App = () => {
+  const [show, setShow] = useState(false);
+  const displayLoader = () => {
+    setShow(true);
 
-  const skills = [
-    {
-      id: 1,
-      name: "Java"
-    },
-    {
-      id: 2,
-      name: "C++"
-    },
-    {
-      id: 3,
-      name: "C"
-    },
-    {
-      id: 4,
-      name: "Python"
-    },
-    {
-      id: 5,
-      name: "JavaScript"
-    },
-  ]
+    setTimeout(()=>{
+      setShow(false);
+    }, 3000)
 
-  const [selectedRadio, setSelectedRadio] = useState(1)
-  return (
+    // api call in 3 sec
+  }
+  return(
     <View style={style.main}>
+      {/* <ActivityIndicator size="large" color="red" />
+      <ActivityIndicator size="small" color="red" /> */}
+
+
+      {/* <ActivityIndicator size={200} color="green" animating={show}/> */}
+
       {
-        skills.map((item, index) =>
-          <TouchableOpacity
-            key={index}
-            onPress={() => setSelectedRadio(item.id)}
-          >
-            <View style={style.radioWrapper}>
-              <View style={style.radio}>
-                {/* <View style={style.radioCircle}></View> */}
-                {
-                  selectedRadio == item.id ? <View style={style.radioCircle}></View> : null
-                }
-              </View>
-              <Text style={style.radioText}>{item.name}</Text>
-            </View>
-          </TouchableOpacity>
-        )
+        show ? <ActivityIndicator size="large" color="red" /> : null
       }
 
+      <Button 
+        title='show loader'
+        onPress={displayLoader}
+      />
     </View>
   )
 }
 
-
 const style = StyleSheet.create({
   main: {
     flex: 1,
-    backgroundColor: 'red',
     justifyContent: 'center',
-    alignItems: 'center',
-  },
-  radioText: {
-    fontSize: 25
-  },
-  radio: {
-    height: 40,
-    width: 40,
-    borderRadius: 20,
-    borderWidth: 2,
-    borderColor: 'black',
-    backgroundColor: 'white',
-    justifyContent: 'center',
-    alignItems: 'center',
-    margin: 10
-  },
-  radioWrapper: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-    margin: 10
-  },
-  radioCircle: {
-    height: 28,
-    width: 28,
-    borderRadius: 10,
-    backgroundColor: 'black',
-    margin: 4
-  }
+    alignItems: 'center'
+    }
 })
-
-
-
-// Dynamic Radio Button
-
 
 export default App

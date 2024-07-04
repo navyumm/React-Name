@@ -348,3 +348,15 @@ Question : Can we use life Cycle in functional and Class Components
 * Make an Array of Skills.
 * Apply Map over the radio button.
 * Update State with skill
+
+## Activity Indicator (Loader)
+
+* Use of Activity Indicator.
+* Common Props.
+* Hide and How with button.
+
+-- Iska use hum jab karte hai jaha par activity perform hone me kuch time lag sakta ho. like : humne button pr click kiya dusre route pr jaane ke liye but api thoda time lga rhi, to hum waha pr loader show kar dete hai, taaki user experience accha ho. User ko ye na lage app lag ho rhi hai. ya net nhi chal rha, aisa kuch.
+
+-- ActivityIndicator ka size hum android me : small, medium, large and koi bhi numeric value de sakte hai
+
+-- whereas apple me hum bss : small, medium and large hi de sakte hai.
