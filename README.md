@@ -298,6 +298,10 @@ Question : Can we use life Cycle in functional and Class Components
 ## useEffect hook for life cycle methods ( for state and props )
 
 * useEffect hook as componentDidUpdate?
+  * means that jab humara state or props update ho tbhi useEffect hook run karega!
 * Define state and button
 * useEffect only for specific state
+  * iske liye hume useEffect hook me jo empty array chord rhe the, usme uss state ka naam dena hoga jiske update hone pr hum useEffect hook call karwana chahte haiiiiii.
 * useEffect only for specific props
+  * isme bhi empty array me props ke through data ko dena hoga jiske change hone par hum useEffect hook call karenge.
+
