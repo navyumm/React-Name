@@ -319,3 +319,26 @@ Question : Can we use life Cycle in functional and Class Components
 * Why Need to call Life cycle on Unmount
 
 -- Unmount Life cycle ki zarurat hume isiliye padhti hai, maan lo jaise ki ye tab call hota hai jab kuch UI me se unmount ho ya delete/hide ho. But during this time hmare timer jo hai backside me chlta rhta h, jissai kaafi data jamaa ho jaayega or phone lag karne lagega. toh iss case me hum Unmount Life cycle ka use karte hai!!
+
+---
+
+## Responsive Layout with Flex
+
+* Understand Responsive UI
+* Understant FLex
+* Make Responsive UI
+
+## Style with Button in RN
+
+* Why default button not support Style
+* Alternative of Button in React-Native
+* Style with TouchableHighlight / TouchableOpacity
+* Make Different type of button with style.
+
+## Radio Button
+
+* Make 2 TouableOpacity with Text
+* Apply style for the radio button.
+* use state to make working radio button.
+
+-- There is no radio button in React-Native. Ss, we need to make it by owns..

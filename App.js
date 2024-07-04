@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Button, FlatList, ScrollView, SectionList, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Button, FlatList, ScrollView, SectionList, StyleSheet, Text, TextInput, TouchableHighlight, TouchableOpacity, View } from 'react-native';
 import ExStyles from './style'
 import { UserData } from './components/UserData';
 import Student from './components/ClassComponent';
@@ -709,7 +709,7 @@ import Student from './components/ClassComponent';
 // }
 
 // const User = () => {
-  
+
 //   return(
 //     <View>
 //       <Text style={{fontSize:30, color:'green'}}>User Component</Text>
@@ -721,42 +721,153 @@ import Student from './components/ClassComponent';
 
 
 // useEffect for Unmount Component
-const App = () => { 
-  const [show, setShow] = useState(true);
+// {
+// const App = () => { 
+//   const [show, setShow] = useState(true);
 
-  return(
-    <View>
-      <Text style={{ fontSize: 30, color: 'orange' }}> useEffect for Unmount Component </Text>
-      <Button 
-        title='toggle'
-        onPress={()=>setShow(!show)}
-      />
-      {
-        show ? <Student /> : null
-      }
+//   return(
+//     <View>
+//       <Text style={{ fontSize: 30, color: 'orange' }}> useEffect for Unmount Component </Text>
+//       <Button 
+//         title='toggle'
+//         onPress={()=>setShow(!show)}
+//       />
+//       {
+//         show ? <Student /> : null
+//       }
 
 
-      <User />
+//       <User />
+//     </View>
+//   )
+// }
+
+// const Student = () => {
+
+//   let timer = setInterval(()=>{
+//     console.warn("timer called");
+//   }, 2000)
+
+//   useEffect(() => {
+//     // console.warn("useEffect called");
+//     // return() => {console.warn("useEffect called for unmount")}
+//     return() => clearInterval(timer)
+//   })
+
+//   return(
+//     <View>
+//       <Text style={{fontSize:30, color:'green'}}>Student Component</Text>
+//     </View>
+//   )
+// }
+// }
+
+
+
+// ----------------------------------------------------------
+// ----------------------------------------------------------
+// ----------------------------------------------------------
+// ----------------------------------------------------------
+
+
+
+// Responsive UI with flex
+// {
+// const App = () => {
+//   return (
+//     <View style={{flex:1}}>
+//       <View style={{flex:1, backgroundColor:'red', flexDirection:'row'}}>
+//         <View style={{flex:1, backgroundColor:'blue', margin:10}}></View>
+//         <View style={{flex:1, backgroundColor:'blue', margin:10}}></View>
+//         <View style={{flex:1, backgroundColor:'blue', margin:10}}></View>
+//       </View>
+//       <View style={{flex:1, backgroundColor:'green'}}>flex2</View>
+//       <View style={{flex:1, backgroundColor:'orange'}}>flex3</View>
+
+//       <TouchableHighlight>
+//         <Text >Touchable</Text>
+//       </TouchableHighlight>
+
+
+//     </View>
+//   )
+// }
+// }
+
+
+
+// Radio Button
+const App = () => {
+
+  const [selectedRadio, setSelectedRadio] = useState(1)
+  return (
+    <View style={style.main}>
+      <TouchableOpacity
+      onPress={() => setSelectedRadio(1)}
+      >
+        <View style={style.radioWrapper}>
+          <View style={style.radio}>
+            {/* <View style={style.radioCircle}></View> */}
+            {
+              selectedRadio === 1 ? <View style={style.radioCircle}></View> : null
+            }
+          </View>
+          <Text style={style.radioText}>Radio 1</Text>
+        </View>
+      </TouchableOpacity>
+
+      <TouchableOpacity
+      onPress={() => setSelectedRadio(2)}
+      >
+        <View style={style.radioWrapper}>
+          <View style={style.radio}>
+          {
+              selectedRadio === 2 ? <View style={style.radioCircle}></View> : null
+            }
+          </View>
+          <Text style={style.radioText}>Radio 1</Text>
+        </View>
+      </TouchableOpacity>
     </View>
   )
 }
 
-const Student = () => {
 
-  let timer = setInterval(()=>{
-    console.warn("timer called");
-  }, 2000)
+const style = StyleSheet.create({
+  main: {
+    flex: 1,
+    backgroundColor: 'red',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  radioText: {
+    fontSize: 25
+  },
+  radio: {
+    height: 40,
+    width: 40,
+    borderRadius: 20,
+    borderWidth: 2,
+    borderColor: 'black',
+    backgroundColor: 'white',
+    justifyContent: 'center',
+    alignItems: 'center',
+    margin: 10
+  },
+  radioWrapper: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    margin: 10
+  },
+  radioCircle: {
+    height: 28,
+    width: 28,
+    borderRadius: 10,
+    backgroundColor: 'black',
+    margin: 4
+  }
+})
 
-  useEffect(() => {
-    // console.warn("useEffect called");
-    // return() => {console.warn("useEffect called for unmount")}
-    return() => clearInterval(timer)
-  })
 
-  return(
-    <View>
-      <Text style={{fontSize:30, color:'green'}}>Student Component</Text>
-    </View>
-  )
-}
 export default App
