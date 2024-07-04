@@ -263,3 +263,34 @@ Har ek component ka apna khud ka life cycle hota hai. na  ki application ka.
 ye aise function hote hai jo apne aap hi execute hote rhte hai apne components ke hisab se. Like: maan lo hum koi component add kar rhe hai tab kuch karna chahte hai ya jab delete ho rha hai, tab kuch karwana chahte haii. waha inka use kiya jata hai.
 
 Question : Can we use life Cycle in functional and Class Components
+
+## Hooks in React-Native
+
+* What are hooks?
+
+  * *Hooks* are a new addition in React 16.8. They let you use state and other React features without writing a class.
+  * use keyword se jo bhi start hote hai ussai hook ki phchaan hoti hai.
+  * and hooks bss function Component me hi use hote hai, Class Component me nhi.
+* What we can do with hooks?
+* State
+* Life cycle methods
+* Context API
+* Ref and Memo
+* Custom hooks
+
+## useEffect hook for life cycle methods
+
+* What is useEffect hook?
+* How to use it.
+* useEffect for mounting phase
+* useEffect for componentDidMount
+  * componentDidMount means ye baaki or kisi case me nhi chalega, ye bss jab component mount hoga, load hoga tvhi work karega !!
+  * iske liye bss hume useEffect hook ke last me empty  [] array lgana hoga !!
+
+-- Jab bhi hume life cycle ka use karna hoga functional component me, usai hum useEffect hook me hi use karenge!!!
+
+-- Ab humara useEffect hook kyoki apne aap mount/ load hota hai , toh jaise hi hum kisi bhi component me kuch bhi change karenge ye baar baar change hota rahega.
+
+-- lekin hum chahte hai ki ye tbhi mount ho jab hum newly newly uss route pr aaye, toh usko rokane ke liye hum, useEffect hook me, last me ek empty [] array de dete hai.
+
+-- means that ab humara useEffect ek hi baar mount karega uske baad kisi bhi component me change ho, vo mount nhi karega !!!

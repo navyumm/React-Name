@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button, FlatList, ScrollView, SectionList, StyleSheet, Text, TextInput, View } from 'react-native';
 import ExStyles from './style'
 import { UserData } from './components/UserData';
@@ -593,6 +593,24 @@ import Student from './components/ClassComponent';
 
 
 
+// Life Cycle with useEffect
+const App = () => {
 
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+  console.warn('useEffect called')
+  })
+  
+  return(
+    <View>
+      <Text style={{fontSize:30}}>LIfe Cycle with useEffect {count}</Text>
+      <Button 
+        title='update count'
+        onPress={()=>setCount(count+1)}
+      />
+    </View>
+  )
+}
 
 export default App
