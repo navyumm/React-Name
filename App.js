@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, FlatList, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Button, FlatList, ScrollView, SectionList, StyleSheet, Text, TextInput, View } from 'react-native';
 import ExStyles from './style'
 import { UserData } from './components/UserData';
 
@@ -398,75 +398,122 @@ import { UserData } from './components/UserData';
 
 
 // Component in loop Flatlist
-const users = [
-  {
-    id: 1,
-    name: 'John',
-    email: 'test@gogi.com'
-  },
-  {
-    id: 2,
-    name: 'cina',
-    email: 'test@gogi.com'
-  },
-  {
-    id: 3,
-    name: 'no',
-    email: 'test@gogi.com'
-  },
-  {
-    id: 4,
-    name: 'bita',
-    email: 'test@gogi.com'
-  }
-]
+// {
+// const users = [
+//   {
+//     id: 1,
+//     name: 'John',
+//     email: 'test@gogi.com'
+//   },
+//   {
+//     id: 2,
+//     name: 'cina',
+//     email: 'test@gogi.com'
+//   },
+//   {
+//     id: 3,
+//     name: 'no',
+//     email: 'test@gogi.com'
+//   },
+//   {
+//     id: 4,
+//     name: 'bita',
+//     email: 'test@gogi.com'
+//   }
+// ]
 
+// const App = () => {
+//   return (
+//     <View>
+//       <Text style={{ fontSize: 30 }}>Component in loop Flatlist</Text>
+
+//       <FlatList
+//         data={users}
+//         // renderItem={({ item }) => <View style={style.box}>
+//         //   <Text style={style.item}>{item.name}</Text>
+//         //   <Text style={style.item}>{item.email}</Text>
+//         // </View>}
+//         renderItem={({ item }) => <UserData item={item}/>}
+//       />
+
+
+//     </View>
+//   )
+// }
+// // {
+// // // const UserData = (props) => {
+// // //   const { item } = props.item;
+// // //   return (
+// // //     <View style={style.box}>
+// // //       <Text style={style.item}>{item.name}</Text>
+// // //       <Text style={style.item}>{item.email}</Text>
+// // //     </View>
+// // //   )
+// // // }
+
+// // // const style = StyleSheet.create({
+// // //   item: {
+// // //     fontSize: 20,
+// // //     margin: 10,
+// // //     flex: 1,
+// // //     margin: 2,
+// // //     backgroundColor: 'orange',
+// // //     textAlign: 'center'
+
+// // //   },
+// // //   box: {
+// // //     flexDirection: 'row',
+// // //     borderWidth: 2,
+// // //     borderColor: 'black',
+// // //     width: 100,
+// // //     marginBottom: 10
+// // //   }
+// // // })
+// // }
+// }
+
+
+// Section List in RN
 const App = () => {
+  const users = [
+    {
+      id: '1',
+      name: 'John',
+      data: ["JS", "Reactjs", "RN"]
+    },
+    {
+      id: '2',
+      name: 'cina',
+      data: ["CS", "JS", "RN"]
+    },
+    {
+      id: '3',
+      name: 'no',
+      data: ["CS", "JS", "RN"]
+    },
+    {
+      id: '2',
+      name: 'bita',
+      data: ["CS", "JS", "RN"]
+    },
+  ]
+
+
+
   return (
     <View>
-      <Text style={{ fontSize: 30 }}>Component in loop Flatlist</Text>
+      <Text style={{ fontSize: 30 }}>Section List in RN</Text>
 
-      <FlatList
-        data={users}
-        // renderItem={({ item }) => <View style={style.box}>
-        //   <Text style={style.item}>{item.name}</Text>
-        //   <Text style={style.item}>{item.email}</Text>
-        // </View>}
-        renderItem={({ item }) => <UserData item={item}/>}
+      <SectionList
+        sections={users}
+        // keyExtractor={(item, index) => item.id}
+        renderItem={({ item }) => <Text style={{fontSize:20, marginLeft:20}}>{item}</Text>}
+        renderSectionHeader={({Section:{name}}) => (
+          <Text style={{fontSize:25, color:'red'}}>{name}</Text>
+        )}
       />
-
-
     </View>
   )
 }
-// {
-// // const UserData = (props) => {
-// //   const { item } = props.item;
-// //   return (
-// //     <View style={style.box}>
-// //       <Text style={style.item}>{item.name}</Text>
-// //       <Text style={style.item}>{item.email}</Text>
-// //     </View>
-// //   )
-// // }
 
-// // const style = StyleSheet.create({
-// //   item: {
-// //     fontSize: 20,
-// //     margin: 10,
-// //     flex: 1,
-// //     margin: 2,
-// //     backgroundColor: 'orange',
-// //     textAlign: 'center'
-
-// //   },
-// //   box: {
-// //     flexDirection: 'row',
-// //     borderWidth: 2,
-// //     borderColor: 'black',
-// //     width: 100,
-// //     marginBottom: 10
-// //   }
-// // })
-// }
 export default App

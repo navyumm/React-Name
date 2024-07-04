@@ -199,3 +199,17 @@ Question : Are we able to use Custom component in FlatList?
 Question : How we pass props ?
 
 Question : Can we pass multiple props?
+
+## Section List in React-Native
+
+* Make SectionData with Array
+  * when we have nested array, there we use Section List
+  * and jab bhi hum nested array lete hai toh andr waale array ki key ( data ) hi name se lete hai!
+* Use SectionList
+* Render Items and Header
+
+Question : can we make nested list with Flatlist ?
+
+Answer : yes, but Section list provide these faetures itself,.
+
+Question : Where we need to use Section List  and Where Flat List?
