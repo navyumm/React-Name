@@ -797,37 +797,128 @@ import Student from './components/ClassComponent';
 
 
 // Radio Button
+// {
+// const App = () => {
+
+//   const [selectedRadio, setSelectedRadio] = useState(1)
+//   return (
+//     <View style={style.main}>
+//       <TouchableOpacity
+//       onPress={() => setSelectedRadio(1)}
+//       >
+//         <View style={style.radioWrapper}>
+//           <View style={style.radio}>
+//             {/* <View style={style.radioCircle}></View> */}
+//             {
+//               selectedRadio === 1 ? <View style={style.radioCircle}></View> : null
+//             }
+//           </View>
+//           <Text style={style.radioText}>Radio 1</Text>
+//         </View>
+//       </TouchableOpacity>
+
+//       <TouchableOpacity
+//       onPress={() => setSelectedRadio(2)}
+//       >
+//         <View style={style.radioWrapper}>
+//           <View style={style.radio}>
+//           {
+//               selectedRadio === 2 ? <View style={style.radioCircle}></View> : null
+//             }
+//           </View>
+//           <Text style={style.radioText}>Radio 1</Text>
+//         </View>
+//       </TouchableOpacity>
+//     </View>
+//   )
+// }
+
+
+// const style = StyleSheet.create({
+//   main: {
+//     flex: 1,
+//     backgroundColor: 'red',
+//     justifyContent: 'center',
+//     alignItems: 'center',
+//   },
+//   radioText: {
+//     fontSize: 25
+//   },
+//   radio: {
+//     height: 40,
+//     width: 40,
+//     borderRadius: 20,
+//     borderWidth: 2,
+//     borderColor: 'black',
+//     backgroundColor: 'white',
+//     justifyContent: 'center',
+//     alignItems: 'center',
+//     margin: 10
+//   },
+//   radioWrapper: {
+//     flexDirection: 'row',
+//     justifyContent: 'center',
+//     alignItems: 'center',
+//     margin: 10
+//   },
+//   radioCircle: {
+//     height: 28,
+//     width: 28,
+//     borderRadius: 10,
+//     backgroundColor: 'black',
+//     margin: 4
+//   }
+// })
+// }
+
+
 const App = () => {
+
+  const skills = [
+    {
+      id: 1,
+      name: "Java"
+    },
+    {
+      id: 2,
+      name: "C++"
+    },
+    {
+      id: 3,
+      name: "C"
+    },
+    {
+      id: 4,
+      name: "Python"
+    },
+    {
+      id: 5,
+      name: "JavaScript"
+    },
+  ]
 
   const [selectedRadio, setSelectedRadio] = useState(1)
   return (
     <View style={style.main}>
-      <TouchableOpacity
-      onPress={() => setSelectedRadio(1)}
-      >
-        <View style={style.radioWrapper}>
-          <View style={style.radio}>
-            {/* <View style={style.radioCircle}></View> */}
-            {
-              selectedRadio === 1 ? <View style={style.radioCircle}></View> : null
-            }
-          </View>
-          <Text style={style.radioText}>Radio 1</Text>
-        </View>
-      </TouchableOpacity>
+      {
+        skills.map((item, index) =>
+          <TouchableOpacity
+            key={index}
+            onPress={() => setSelectedRadio(item.id)}
+          >
+            <View style={style.radioWrapper}>
+              <View style={style.radio}>
+                {/* <View style={style.radioCircle}></View> */}
+                {
+                  selectedRadio == item.id ? <View style={style.radioCircle}></View> : null
+                }
+              </View>
+              <Text style={style.radioText}>{item.name}</Text>
+            </View>
+          </TouchableOpacity>
+        )
+      }
 
-      <TouchableOpacity
-      onPress={() => setSelectedRadio(2)}
-      >
-        <View style={style.radioWrapper}>
-          <View style={style.radio}>
-          {
-              selectedRadio === 2 ? <View style={style.radioCircle}></View> : null
-            }
-          </View>
-          <Text style={style.radioText}>Radio 1</Text>
-        </View>
-      </TouchableOpacity>
     </View>
   )
 }
@@ -868,6 +959,10 @@ const style = StyleSheet.create({
     margin: 4
   }
 })
+
+
+
+// Dynamic Radio Button
 
 
 export default App

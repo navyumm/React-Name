@@ -342,3 +342,9 @@ Question : Can we use life Cycle in functional and Class Components
 * use state to make working radio button.
 
 -- There is no radio button in React-Native. Ss, we need to make it by owns..
+
+## Dynamic Radio Button
+
+* Make an Array of Skills.
+* Apply Map over the radio button.
+* Update State with skill
