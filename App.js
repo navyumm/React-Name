@@ -688,30 +688,74 @@ import Student from './components/ClassComponent';
 
 
 // Show/Hide component
+// {
+// const App = () => { 
+//   const [show, setShow] = useState(true);
+
+//   return(
+//     <View>
+//       <Text style={{ fontSize: 30, color: 'orange' }}> Show/Hide Component </Text>
+//       <Button 
+//         title='toggle component'
+//         onPress={()=>setShow(!show)}
+//       />
+//       {
+//         show === true? <User /> : null
+//       }
+
+//       <User />
+//     </View>
+//   )
+// }
+
+// const User = () => {
+  
+//   return(
+//     <View>
+//       <Text style={{fontSize:30, color:'green'}}>User Component</Text>
+//     </View>
+//   )
+// }
+// }
+
+
+
+// useEffect for Unmount Component
 const App = () => { 
   const [show, setShow] = useState(true);
 
   return(
     <View>
-      <Text style={{ fontSize: 30, color: 'orange' }}> Show/Hide Component </Text>
+      <Text style={{ fontSize: 30, color: 'orange' }}> useEffect for Unmount Component </Text>
       <Button 
-        title='toggle component'
+        title='toggle'
         onPress={()=>setShow(!show)}
       />
       {
-        show === true? <User /> : null
+        show ? <Student /> : null
       }
+
 
       <User />
     </View>
   )
 }
 
-const User = () => {
-  
+const Student = () => {
+
+  let timer = setInterval(()=>{
+    console.warn("timer called");
+  }, 2000)
+
+  useEffect(() => {
+    // console.warn("useEffect called");
+    // return() => {console.warn("useEffect called for unmount")}
+    return() => clearInterval(timer)
+  })
+
   return(
     <View>
-      <Text style={{fontSize:30, color:'green'}}>User Component</Text>
+      <Text style={{fontSize:30, color:'green'}}>Student Component</Text>
     </View>
   )
 }

@@ -309,3 +309,13 @@ Question : Can we use life Cycle in functional and Class Components
 
 * Make Component.
 * Button and State for component.
+
+-- Jab bhi hum apne component ko hide ya detach karte hai apne UI se tab Unmount Life cycle method call hota hai!!
+
+## useEffect for Unmount Life Cycle
+
+* Make Component and Hide on Button Press
+* Apply useEffect Hook
+* Why Need to call Life cycle on Unmount
+
+-- Unmount Life cycle ki zarurat hume isiliye padhti hai, maan lo jaise ki ye tab call hota hai jab kuch UI me se unmount ho ya delete/hide ho. But during this time hmare timer jo hai backside me chlta rhta h, jissai kaafi data jamaa ho jaayega or phone lag karne lagega. toh iss case me hum Unmount Life cycle ka use karte hai!!
