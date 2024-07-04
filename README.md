@@ -294,3 +294,10 @@ Question : Can we use life Cycle in functional and Class Components
 -- lekin hum chahte hai ki ye tbhi mount ho jab hum newly newly uss route pr aaye, toh usko rokane ke liye hum, useEffect hook me, last me ek empty [] array de dete hai.
 
 -- means that ab humara useEffect ek hi baar mount karega uske baad kisi bhi component me change ho, vo mount nhi karega !!!
+
+## useEffect hook for life cycle methods ( for state and props )
+
+* useEffect hook as componentDidUpdate?
+* Define state and button
+* useEffect only for specific state
+* useEffect only for specific props

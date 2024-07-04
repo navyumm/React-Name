@@ -594,23 +594,93 @@ import Student from './components/ClassComponent';
 
 
 // Life Cycle with useEffect
+// {
+// const App = () => {
+
+//   const [count, setCount] = useState(0);
+
+//   useEffect(() => {
+//   console.warn('useEffect called')
+//   },[])
+
+//   return(
+//     <View>
+//       <Text style={{fontSize:30}}>LIfe Cycle with useEffect {count}</Text>
+//       <Button 
+//         title='update count'
+//         onPress={()=>setCount(count+1)}
+//       />
+//     </View>
+//   )
+// }
+// }
+
+
+// useEffect for state and props
 const App = () => {
 
   const [count, setCount] = useState(0);
+  const [data, setData] = useState(100);
+  const [number, setNumber] = useState(100);
 
-  useEffect(() => {
-  console.warn('useEffect called')
-  })
-  
-  return(
+  // useEffect(() => {
+  //   console.warn("do some animation here :", count)
+  // }, [count, number])
+
+  // useEffect(() => {
+  //   console.warn("call api here : ", data)
+  // }, [data])
+
+  return (
     <View>
-      <Text style={{fontSize:30}}>LIfe Cycle with useEffect {count}</Text>
-      <Button 
-        title='update count'
-        onPress={()=>setCount(count+1)}
+      <Text style={{ fontSize: 30 }}> useEffect in Component : {count} : {data} : {number}</Text>
+
+      <Button
+        title='update counter'
+        onPress={() => setCount(count + 1)}
       />
+
+      <Button
+        title='update counter'
+        onPress={() => setData(data + 1)}
+      />
+
+      <Button
+        title='update counter'
+        onPress={() => setNumber(number + 1)}
+      />
+
+      <User 
+        info={{data, count}}
+      />
+
+
     </View>
   )
 }
 
+
+const User = () => {
+  // console.warn(props.info);
+
+  useEffect(()=> {
+    console.warn("run this code when data is updated");
+  },[props.info.data])
+
+  useEffect(()=> {
+    console.warn("run this code when counter is updated");
+  },[props.info.count])
+
+  return (
+    <View>
+      <Text style={{ fontSize: 30, color: 'orange' }}>user component</Text>
+
+
+      <Text style={{ fontSize: 30, color: 'orange' }}>data : {props.info.data}</Text>
+      <Text style={{ fontSize: 30, color: 'orange' }}>count : {props.info.count}</Text>
+
+    </View>
+  )
+
+}
 export default App
