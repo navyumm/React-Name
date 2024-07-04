@@ -475,51 +475,54 @@ import Student from './components/ClassComponent';
 
 
 // Section List in RN
+// {
+// const App = () => {
+//   const users = [
+//     {
+//       id: '1',
+//       name: 'John',
+//       data: ["JS", "Reactjs", "RN"]
+//     },
+//     {
+//       id: '2',
+//       name: 'cina',
+//       data: ["CS", "JS", "RN"]
+//     },
+//     {
+//       id: '3',
+//       name: 'no',
+//       data: ["CS", "JS", "RN"]
+//     },
+//     {
+//       id: '2',
+//       name: 'bita',
+//       data: ["CS", "JS", "RN"]
+//     },
+//   ]
+
+
+
+//   return (
+//     <View>
+//       <Text style={{ fontSize: 30 }}>Section List in RN</Text>
+
+//       <SectionList
+//         sections={users}
+//         // keyExtractor={(item, index) => item.id}
+//         renderItem={({ item }) => <Text style={{fontSize:20, marginLeft:20}}>{item}</Text>}
+//         renderSectionHeader={({Section:{name}}) => (
+//           <Text style={{fontSize:25, color:'red'}}>{name}</Text>
+//         )}
+//       />
+//     </View>
+//   )
+// }
+// }
+
+
+
+// Class Component in React-Native
 {
-const App = () => {
-  const users = [
-    {
-      id: '1',
-      name: 'John',
-      data: ["JS", "Reactjs", "RN"]
-    },
-    {
-      id: '2',
-      name: 'cina',
-      data: ["CS", "JS", "RN"]
-    },
-    {
-      id: '3',
-      name: 'no',
-      data: ["CS", "JS", "RN"]
-    },
-    {
-      id: '2',
-      name: 'bita',
-      data: ["CS", "JS", "RN"]
-    },
-  ]
-
-
-
-  return (
-    <View>
-      <Text style={{ fontSize: 30 }}>Section List in RN</Text>
-
-      <SectionList
-        sections={users}
-        // keyExtractor={(item, index) => item.id}
-        renderItem={({ item }) => <Text style={{fontSize:20, marginLeft:20}}>{item}</Text>}
-        renderSectionHeader={({Section:{name}}) => (
-          <Text style={{fontSize:25, color:'red'}}>{name}</Text>
-        )}
-      />
-    </View>
-  )
-}
-}
-
-
 class App extends React.Component{
   fruit = () => {
     console.warn("Apple");
@@ -541,6 +544,7 @@ class App extends React.Component{
       </View>
       )
       }
+}
 }
 
 export default App

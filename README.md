@@ -234,3 +234,11 @@ Question : How to function on Class Component ?
 Question : What the purpose of render function ?
 
 Answer : we use render function in class component. Because class component can not return anything by its own. So,  we need to return UI part in render function.
+
+
+## State and Props in Class Component
+
+* Define State in Class Component
+* Print state value
+* Update state
+* Pass props and display in Class Component
