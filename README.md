@@ -305,3 +305,7 @@ Question : Can we use life Cycle in functional and Class Components
 * useEffect only for specific props
   * isme bhi empty array me props ke through data ko dena hoga jiske change hone par hum useEffect hook call karenge.
 
+## Show Hide Component
+
+* Make Component.
+* Button and State for component.
