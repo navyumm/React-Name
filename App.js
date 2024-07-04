@@ -549,45 +549,50 @@ import Student from './components/ClassComponent';
 
 
 // State and Props in Class Component
-class App extends React.Component {
-  constructor(){
-    super();
-    this.state = {
-      name: 'Rahul',
-      // age: 20,
-      // address: 'Delhi'
-      }
-  }
+// {
+// class App extends React.Component {
+//   constructor(){
+//     super();
+//     this.state = {
+//       name: 'Rahul',
+//       // age: 20,
+//       // address: 'Delhi'
+//       }
+//   }
 
 
-  updateName = (val) => {
-    this.setState({name: val})   // setState bydefault aati h class me 
-  }
+//   updateName = (val) => {
+//     this.setState({name: val})   // setState bydefault aati h class me 
+//   }
 
 
-  render() {
-    return (
-      <View>
-        <Text style={{ fontSize: 30 }}>{this.state.name}</Text>
-        <TextInput
-          placeholder='enter your name'
-          onChangeText={
-            (text)=>this.updateName(text)
-            }
-        />
-        <Button
-          title='Press me'
-          onPress={this.fruit}
-        />
+//   render() {
+//     return (
+//       <View>
+//         <Text style={{ fontSize: 30 }}>{this.state.name}</Text>
+//         <TextInput
+//           placeholder='enter your name'
+//           onChangeText={
+//             (text)=>this.updateName(text)
+//             }
+//         />
+//         <Button
+//           title='Press me'
+//           onPress={this.fruit}
+//         />
 
 
-        <Student 
-          name={this.state.name}
-        />
-      </View>
-    )
-  }
-}
+//         <Student 
+//           name={this.state.name}
+//         />
+//       </View>
+//     )
+//   }
+// }
+// }
+
+
+
 
 
 export default App

@@ -226,7 +226,6 @@ Question : Which one we use Functional component or Class Component ?
 
 Answer : Both, but now-a-day functional Component are recommended in both Reactjs and React-native official documentation.
 
-
 Question : Difference between Class and Functional Component ?
 
 Question : How to function on Class Component ?
@@ -235,10 +234,32 @@ Question : What the purpose of render function ?
 
 Answer : we use render function in class component. Because class component can not return anything by its own. So,  we need to return UI part in render function.
 
-
 ## State and Props in Class Component
 
 * Define State in Class Component
 * Print state value
 * Update state
 * Pass props and display in Class Component
+
+## LIfe Cycle methods
+
+* What is the life Cycle in React-Native
+  * like : human ( jaise phle vo banta hai, fir kuch na kuch changes aate rhte hai, end me ram nam satya ho jata hai )
+* The phase of life cycle methods
+  * Mounting
+  * Updating
+  * Unmounting
+* When the life cycle will be executed.
+  * When Component Render First Time.
+  * When Component Upadte with State
+  * When Component Update with Props
+  * On Error
+  * When Component Unmount
+
+*** Without this we are unable to work on big pojects.
+
+Har ek component ka apna khud ka life cycle hota hai. na  ki application ka.
+
+ye aise function hote hai jo apne aap hi execute hote rhte hai apne components ke hisab se. Like: maan lo hum koi component add kar rhe hai tab kuch karna chahte hai ya jab delete ho rha hai, tab kuch karwana chahte haii. waha inka use kiya jata hai.
+
+Question : Can we use life Cycle in functional and Class Components
