@@ -213,3 +213,24 @@ Question : can we make nested list with Flatlist ?
 Answer : yes, but Section list provide these faetures itself,.
 
 Question : Where we need to use Section List  and Where Flat List?
+
+## Class Component in React-Native ( used in old version )
+
+* Make Class Component
+* Add Component in Class Component
+* Event and Function in class Component
+
+Class ke andr hum const let kuch use nhi kar sakte during the time of making function or anything
+
+Question : Which one we use Functional component or Class Component ?
+
+Answer : Both, but now-a-day functional Component are recommended in both Reactjs and React-native official documentation.
+
+
+Question : Difference between Class and Functional Component ?
+
+Question : How to function on Class Component ?
+
+Question : What the purpose of render function ?
+
+Answer : we use render function in class component. Because class component can not return anything by its own. So,  we need to return UI part in render function.

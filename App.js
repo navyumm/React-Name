@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Button, FlatList, ScrollView, SectionList, StyleSheet, Text, TextInput, View } from 'react-native';
 import ExStyles from './style'
 import { UserData } from './components/UserData';
+import Student from './components/ClassComponent';
 
 
 
@@ -474,6 +475,7 @@ import { UserData } from './components/UserData';
 
 
 // Section List in RN
+{
 const App = () => {
   const users = [
     {
@@ -514,6 +516,31 @@ const App = () => {
       />
     </View>
   )
+}
+}
+
+
+class App extends React.Component{
+  fruit = () => {
+    console.warn("Apple");
+  }
+  render(){
+    return(
+      <View>
+        <Text style={{fontSize:30}}>Section List in RN</Text>
+        <TextInput 
+          placeholder='enter your name'
+        />
+        <Button 
+          title='Press me'
+          onPress={this.fruit}
+        />
+
+
+        <Student />
+      </View>
+      )
+      }
 }
 
 export default App
