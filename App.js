@@ -522,29 +522,72 @@ import Student from './components/ClassComponent';
 
 
 // Class Component in React-Native
-{
-class App extends React.Component{
-  fruit = () => {
-    console.warn("Apple");
+// {
+// class App extends React.Component{
+//   fruit = () => {
+//     console.warn("Apple");
+//   }
+//   render(){
+//     return(
+//       <View>
+//         <Text style={{fontSize:30}}>Section List in RN</Text>
+//         <TextInput 
+//           placeholder='enter your name'
+//         />
+//         <Button 
+//           title='Press me'
+//           onPress={this.fruit}
+//         />
+
+
+//         <Student />
+//       </View>
+//       )
+//       }
+// }
+// }
+
+
+// State and Props in Class Component
+class App extends React.Component {
+  constructor(){
+    super();
+    this.state = {
+      name: 'Rahul',
+      // age: 20,
+      // address: 'Delhi'
+      }
   }
-  render(){
-    return(
+
+
+  updateName = (val) => {
+    this.setState({name: val})   // setState bydefault aati h class me 
+  }
+
+
+  render() {
+    return (
       <View>
-        <Text style={{fontSize:30}}>Section List in RN</Text>
-        <TextInput 
+        <Text style={{ fontSize: 30 }}>{this.state.name}</Text>
+        <TextInput
           placeholder='enter your name'
+          onChangeText={
+            (text)=>this.updateName(text)
+            }
         />
-        <Button 
+        <Button
           title='Press me'
           onPress={this.fruit}
         />
 
 
-        <Student />
+        <Student 
+          name={this.state.name}
+        />
       </View>
-      )
-      }
+    )
+  }
 }
-}
+
 
 export default App
