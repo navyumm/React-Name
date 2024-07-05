@@ -434,3 +434,9 @@ Question : Can we use life Cycle in functional and Class Components
 * Make Wrapper of Navigation.
 * Make Login and Home Component.
 * Navigate between Screens.
+
+## Stack Navigation Style
+
+* The Style for single screen
+* Common Style for all screen
+* Change the title of the screen

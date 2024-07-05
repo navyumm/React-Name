@@ -1283,7 +1283,7 @@
 // }
 
 
-// Navigation with React-Native
+// Navigation with React-Native // Stack Navigation // Stack Navigation style
 
 import { View, Text, Button } from 'react-native'
 import React from 'react'
@@ -1295,11 +1295,32 @@ const Stack = createNativeStackNavigator();
 const App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator
+                screenOptions={{
+            title: "User login",
+            headerStyle: {
+              backgroundColor: '#f4511e',
+            },
+            headerTitleStyle:{
+              fontSize:30
+            },
+            headerTintColor: 'orange'
+            }}
+      >
 
         <Stack.Screen
           name="Login"
           component={Login}
+          options={{
+            title: "User login",
+            headerStyle: {
+              backgroundColor: '#fff',
+            },
+            headerTitleStyle:{
+              fontSize:30
+            },
+            headerTintColor: 'orange'
+            }}
         />
 
         <Stack.Screen
