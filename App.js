@@ -1128,25 +1128,58 @@
 
 
 // Status Bar 
-import { Button, StatusBar, StyleSheet, Text, View } from 'react-native'
-import React, { useState } from 'react'
+// {
+// import { Button, StatusBar, StyleSheet, Text, View } from 'react-native'
+// import React, { useState } from 'react'
 
+
+// const App = () => {
+//   const [hide, setHide] = useState(false)
+//   const [barStyle, setBarStyle] = useState("default")
+
+//   return (
+//     <View style={styles.main}>
+//       <StatusBar 
+//         backgroundColor='red'
+//         // barStyle='light-content'
+//         barStyle={barStyle}
+//         hidden={false}
+//       />
+
+//       <Button title='toggle Status Bar' onPress={()=>setHide(!hide)}/>
+//       <Button title='Update style' onPress={()=>setBarStyle('dark-content')}/>
+//     </View>
+//   )
+// }
+
+// export default App
+
+// const styles = StyleSheet.create({
+//   main: {
+//     flex: 1,
+//     justifyContent: 'center',
+//     alignItems: 'center'
+//     }
+// })
+// }
+
+
+// Platform
+import { Platform, StyleSheet, Text, View } from 'react-native'
+import React from 'react'
 
 const App = () => {
-  const [hide, setHide] = useState(false)
-  const [barStyle, setBarStyle] = useState("default")
-
   return (
-    <View style={styles.main}>
-      <StatusBar 
-        backgroundColor='red'
-        // barStyle='light-content'
-        barStyle={barStyle}
-        hidden={false}
-      />
-
-      <Button title='toggle Status Bar' onPress={()=>setHide(!hide)}/>
-      <Button title='Update style' onPress={()=>setBarStyle('dark-content')}/>
+    <View>
+      <Text style={{fontSize:30}}>Platform : {Platform.OS}</Text>
+      {
+        Platform.OS == "ios"? 
+        <View styl={{beginAsyncEvent:'red', height:100, width:100}}> </View>
+        :
+        <View styl={{beginAsyncEvent:'green', height:100, width:100}}> </View>
+      }
+      <Text style={styles.text}> Hello </Text>
+      <Text>{JSON.stringify(Platform.constants.reactNativeVersion.minor)}</Text>
     </View>
   )
 }
@@ -1154,9 +1187,7 @@ const App = () => {
 export default App
 
 const styles = StyleSheet.create({
-  main: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
-    }
+  text: {
+    color: Platform.OS == "android" ? "orange" : "yellow" ,
+  }
 })

@@ -387,3 +387,10 @@ Question : Can we use life Cycle in functional and Class Components
 * How to Update Style for Status Bar
 * Hide and Show Status Bar
 * Update Statis with Button Press
+
+## Platform in React Native
+
+* What is Platform
+* How to check Platform
+* Apply conditions with Platorms
+* Other Importants
