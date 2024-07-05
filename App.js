@@ -1225,57 +1225,119 @@
 
 
 // Custom Modal ( Pop-up )
-import { Button, StyleSheet, Text, View } from 'react-native'
-import React, { useState } from 'react'
+// {
+// import { Button, StyleSheet, Text, View } from 'react-native'
+// import React, { useState } from 'react'
 
+// const App = () => {
+//   const [showModal, setShowModal] = useState(false);
+
+//   return (
+//     <View style={styles.container}>
+//       {
+//         showModal ?
+//           <View style={styles.modal}>
+//             <View style={styles.body}>
+//               <Text style={styles.text}>This is a custom modal</Text>
+//               <Button
+//                 title='close'
+//                 onPress={() => setShowModal(false)}
+//               />
+//             </View>
+//           </View>
+//           : null
+//       }
+
+
+//       <Button
+//         title="Open Dialog"
+//         onPress={() => setShowModal(true)}
+//       />
+//     </View>
+//   )
+// }
+
+// export default App
+
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     justifyContent: 'flex-end'
+//   },
+//   modal: {
+//     flex: 1,
+//     backgroundColor: 'egba(50,50,50,.5)',
+//     justifyContent: 'center',
+//     alignItems: 'center'
+//   },
+//   body: {
+//     backgroundColor: 'white',
+//     height: 300,
+//     width: 300,
+//     borderRadius: 10,
+//     justifyContent: 'center',
+//     alignItems: 'center',
+//     padding: 20
+//   }
+// })
+// }
+
+
+// Navigation with React-Native
+
+import { View, Text, Button } from 'react-native'
+import React from 'react'
+import { NavigationContainer } from '@react-navigation/native'
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
+
+
+const Stack = createNativeStackNavigator();
 const App = () => {
-  const [showModal, setShowModal] = useState(false);
-
   return (
-    <View style={styles.container}>
-      {
-        showModal ?
-          <View style={styles.modal}>
-            <View style={styles.body}>
-              <Text style={styles.text}>This is a custom modal</Text>
-              <Button
-                title='close'
-                onPress={() => setShowModal(false)}
-              />
-            </View>
-          </View>
-          : null
-      }
+    <NavigationContainer>
+      <Stack.Navigator>
 
+        <Stack.Screen
+          name="Login"
+          component={Login}
+        />
+
+        <Stack.Screen
+          name="Home"
+          component={Home}
+        />
+
+      </Stack.Navigator>
+    </NavigationContainer>
+  )
+}
+
+
+const Home = () => {
+  return (
+    <View style={{
+      flex: 1, alignItems: 'center', justifyContent: 'center'
+    }}>
+      <Text style={{ fontSize: 30 }}>Home Screen</Text>
+    </View>
+  )
+}
+
+const Login = (props) => {
+  return (
+    <View style={{
+      flex: 1, alignItems: 'center', justifyContent: 'center'
+    }}>
+      <Text style={{ fontSize: 30 }}>Login Screen</Text>
 
       <Button
-        title="Open Dialog"
-        onPress={() => setShowModal(true)}
+        title="Go to Home"
+        onPress={() => {
+          props.navigation.navigate('Home')
+        }}
       />
     </View>
   )
 }
 
 export default App
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'flex-end'
-  },
-  modal: {
-    flex: 1,
-    backgroundColor: 'egba(50,50,50,.5)',
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-  body: {
-    backgroundColor: 'white',
-    height: 300,
-    width: 300,
-    borderRadius: 10,
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: 20
-  }
-})

@@ -407,9 +407,30 @@ Question : Can we use life Cycle in functional and Class Components
 
 -- lekin iske liye hume sbse phle built bnani padegi  :             npx react-native run-android / ios
 
-
 ## Custom Modal ( Pop-up )
 
 * Add Button and UI component
 * Use Style to make Modal
 * Show and Hide Modal with state
+
+-----------------------------------------------------------------------------------------------------------------------------_
+
+## Navigation with React-Native
+
+* What is Navigation
+* Type of Navigation
+  * Stack
+    * Jab 1st screen se 2nd, 2nd se 3rd, so on.. par jaana ho, udhar Stack ka use karte hai
+  * Drawer
+    * side menu ( like side me upr 3 lines bani hoti hai, uspar click karne se, saari navigation samne aa jaati hai ya list kahlo ) udhar iska use karte hai
+  * Tab
+    * Tab navigation waha use hoti hai jaha pr ek application me ( whatsapp ) alg alg tab bane hote hai. like : chats, status and moree..
+* Exaples
+
+## Stack Navigation
+
+* Install React Navigation.
+* Install Dependencies
+* Make Wrapper of Navigation.
+* Make Login and Home Component.
+* Navigate between Screens.
