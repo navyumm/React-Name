@@ -394,3 +394,22 @@ Question : Can we use life Cycle in functional and Class Components
 * How to check Platform
 * Apply conditions with Platorms
 * Other Importants
+
+-- Ye kaafi important kahi baari hume platform base me conditions lgani padh sakti hai. like : android, ios or and windows ke liye alag alag conditions mention karte hai.
+
+## Install NPM Package in React-Native
+
+* What is Package
+* How to install Package
+* Write code to apply changes
+
+-- npm i react-native-webview         :  agar hume apne phone me web kholna hai koi, toh ye pakage lagega
+
+-- lekin iske liye hume sbse phle built bnani padegi  :             npx react-native run-android / ios
+
+
+## Custom Modal ( Pop-up )
+
+* Add Button and UI component
+* Use Style to make Modal
+* Show and Hide Modal with state

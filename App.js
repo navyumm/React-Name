@@ -1165,21 +1165,93 @@
 
 
 // Platform
-import { Platform, StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+// {
+// import { Platform, StyleSheet, Text, View } from 'react-native'
+// import React from 'react'
+
+// const App = () => {
+//   return (
+//     <View>
+//       <Text style={{fontSize:30}}>Platform : {Platform.OS}</Text>
+//       {
+//         Platform.OS == "ios"? 
+//         <View styl={{beginAsyncEvent:'red', height:100, width:100}}> </View>
+//         :
+//         <View styl={{beginAsyncEvent:'green', height:100, width:100}}> </View>
+//       }
+//       <Text style={styles.text}> Hello </Text>
+//       <Text>{JSON.stringify(Platform.constants.reactNativeVersion.minor)}</Text>
+//     </View>
+//   )
+// }
+
+// export default App
+
+// const styles = StyleSheet.create({
+//   text: {
+//     color: Platform.OS == "android" ? "orange" : "yellow" ,
+//   }
+// })
+// }
+
+
+// -------------------------------------------------------
+// -------------------------------------------------------
+// -------------------------------------------------------
+
+
+
+// Install NPM package in RN
+// {
+// import { StyleSheet, Text, View } from 'react-native'
+// import React from 'react'
+// import WebView from 'react-native-webview'
+
+// const App = () => {
+//   return (
+//     <View>
+//       <WebView 
+//         source={{uri: 'https://www.google.com'}}
+//       />
+//     </View>
+//   )
+// }
+
+// export default App
+
+// const styles = StyleSheet.create({})
+// }
+
+
+
+// Custom Modal ( Pop-up )
+import { Button, StyleSheet, Text, View } from 'react-native'
+import React, { useState } from 'react'
 
 const App = () => {
+  const [showModal, setShowModal] = useState(false);
+
   return (
-    <View>
-      <Text style={{fontSize:30}}>Platform : {Platform.OS}</Text>
+    <View style={styles.container}>
       {
-        Platform.OS == "ios"? 
-        <View styl={{beginAsyncEvent:'red', height:100, width:100}}> </View>
-        :
-        <View styl={{beginAsyncEvent:'green', height:100, width:100}}> </View>
+        showModal ?
+          <View style={styles.modal}>
+            <View style={styles.body}>
+              <Text style={styles.text}>This is a custom modal</Text>
+              <Button
+                title='close'
+                onPress={() => setShowModal(false)}
+              />
+            </View>
+          </View>
+          : null
       }
-      <Text style={styles.text}> Hello </Text>
-      <Text>{JSON.stringify(Platform.constants.reactNativeVersion.minor)}</Text>
+
+
+      <Button
+        title="Open Dialog"
+        onPress={() => setShowModal(true)}
+      />
     </View>
   )
 }
@@ -1187,7 +1259,23 @@ const App = () => {
 export default App
 
 const styles = StyleSheet.create({
-  text: {
-    color: Platform.OS == "android" ? "orange" : "yellow" ,
+  container: {
+    flex: 1,
+    justifyContent: 'flex-end'
+  },
+  modal: {
+    flex: 1,
+    backgroundColor: 'egba(50,50,50,.5)',
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  body: {
+    backgroundColor: 'white',
+    height: 300,
+    width: 300,
+    borderRadius: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 20
   }
 })
