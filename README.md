@@ -360,3 +360,11 @@ Question : Can we use life Cycle in functional and Class Components
 -- ActivityIndicator ka size hum android me : small, medium, large and koi bhi numeric value de sakte hai
 
 -- whereas apple me hum bss : small, medium and large hi de sakte hai.
+
+## Modal in React Native (Dialog Box)
+
+* Import button and Modal
+* Add style to button and Modal
+* Show and Hide Modal with State
+
+--  Where we want to show quik information, warning, error messages and to update any field there we use Modal.

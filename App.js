@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { ActivityIndicator, Button, FlatList, ScrollView, SectionList, StyleSheet, Text, TextInput, TouchableHighlight, TouchableOpacity, View } from 'react-native';
+import { ActivityIndicator, Button, FlatList, Modal, ScrollView, SectionList, StyleSheet, Text, TextInput, TouchableHighlight, TouchableOpacity, View } from 'react-native';
 import ExStyles from './style'
 import { UserData } from './components/UserData';
 import Student from './components/ClassComponent';
@@ -966,43 +966,112 @@ import style from './style';
 
 
 // Activity Indicator (Loader)
+// {
+// const App = () => {
+//   const [show, setShow] = useState(false);
+//   const displayLoader = () => {
+//     setShow(true);
+
+//     setTimeout(()=>{
+//       setShow(false);
+//     }, 3000)
+
+//     // api call in 3 sec
+//   }
+//   return(
+//     <View style={style.main}>
+//       {/* <ActivityIndicator size="large" color="red" />
+//       <ActivityIndicator size="small" color="red" /> */}
+
+
+//       {/* <ActivityIndicator size={200} color="green" animating={show}/> */}
+
+//       {
+//         show ? <ActivityIndicator size="large" color="red" /> : null
+//       }
+
+//       <Button 
+//         title='show loader'
+//         onPress={displayLoader}
+//       />
+//     </View>
+//   )
+// }
+
+// const style = StyleSheet.create({
+//   main: {
+//     flex: 1,
+//     justifyContent: 'center',
+//     alignItems: 'center'
+//     }
+// })
+// }
+
+
+// --------------------------------------------
+// --------------------------------------------
+// --------------------------------------------
+
+
+// Modal in React Native (Dialog Box)
 const App = () => {
-  const [show, setShow] = useState(false);
-  const displayLoader = () => {
-    setShow(true);
+  const [showModal, setShowModal] = useState(false);
 
-    setTimeout(()=>{
-      setShow(false);
-    }, 3000)
-
-    // api call in 3 sec
-  }
   return(
-    <View style={style.main}>
-      {/* <ActivityIndicator size="large" color="red" />
-      <ActivityIndicator size="small" color="red" /> */}
-
-
-      {/* <ActivityIndicator size={200} color="green" animating={show}/> */}
-
-      {
-        show ? <ActivityIndicator size="large" color="red" /> : null
-      }
-
+    <View style={styles.main}>
+    <Text>Modal in React Native (Dialog Box)</Text>
+      <Modal
+      transparent={true}
+      visible={showModal}
+      animationType='slide'
+        >
+        <View style={styles.centerView}>
+          <View style={styles.modalView}>
+            <Text style={{fontSize:30, marginBottom:20}}>Hello Code Step by step</Text>
+            <Button 
+              title='close modal'
+              onPress={() => setShowModal(false)}
+            />
+          </View>
+        </View>
+      </Modal>    
+      <View style={styles.buttonView}>
       <Button 
-        title='show loader'
-        onPress={displayLoader}
+        title='open Madal'
+        onPress={() => setShowModal(true)}
       />
+      </View>
+
     </View>
   )
 }
 
-const style = StyleSheet.create({
+const styles = StyleSheet.create({
   main: {
+    flex: 1,
+  },
+  buttonView: {
+    flex: 1,
+    justifyContent: 'flex-end',
+  },
+  centerView: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center'
-    }
+  },
+  modalView: {
+    backgroundColor: '#fff',
+    padding: 30,
+    borderRadius: 10,
+    width: 300,
+    height: 300,
+    alignItems: 'center',
+    justifyContent: 'center',
+    shadowColor: 'black',
+    elevation:10 
+  }
+  
 })
+
 
 export default App
