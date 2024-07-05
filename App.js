@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import { ActivityIndicator, Button, FlatList, Modal, ScrollView, SectionList, StyleSheet, Text, TextInput, TouchableHighlight, TouchableOpacity, View } from 'react-native';
-import ExStyles from './style'
-import { UserData } from './components/UserData';
-import Student from './components/ClassComponent';
-import style from './style';
+// import React, { useEffect, useState } from 'react';
+// import { ActivityIndicator, Button, FlatList, Modal, ScrollView, SectionList, StyleSheet, Text, TextInput, TouchableHighlight, TouchableOpacity, View } from 'react-native';
+// import ExStyles from './style'
+// import { UserData } from './components/UserData';
+// import Student from './components/ClassComponent';
+// import style from './style';
 
 
 
@@ -1014,64 +1014,105 @@ import style from './style';
 
 
 // Modal in React Native (Dialog Box)
+// {
+// const App = () => {
+//   const [showModal, setShowModal] = useState(false);
+
+//   return(
+//     <View style={styles.main}>
+//     <Text>Modal in React Native (Dialog Box)</Text>
+//       <Modal
+//       transparent={true}
+//       visible={showModal}
+//       animationType='slide'
+//         >
+//         <View style={styles.centerView}>
+//           <View style={styles.modalView}>
+//             <Text style={{fontSize:30, marginBottom:20}}>Hello Code Step by step</Text>
+//             <Button 
+//               title='close modal'
+//               onPress={() => setShowModal(false)}
+//             />
+//           </View>
+//         </View>
+//       </Modal>    
+//       <View style={styles.buttonView}>
+//       <Button 
+//         title='open Madal'
+//         onPress={() => setShowModal(true)}
+//       />
+//       </View>
+
+//     </View>
+//   )
+// }
+
+// const styles = StyleSheet.create({
+//   main: {
+//     flex: 1,
+//   },
+//   buttonView: {
+//     flex: 1,
+//     justifyContent: 'flex-end',
+//   },
+//   centerView: {
+//     flex: 1,
+//     justifyContent: 'center',
+//     alignItems: 'center'
+//   },
+//   modalView: {
+//     backgroundColor: '#fff',
+//     padding: 30,
+//     borderRadius: 10,
+//     width: 300,
+//     height: 300,
+//     alignItems: 'center',
+//     justifyContent: 'center',
+//     shadowColor: 'black',
+//     elevation:10 
+//   }
+
+// })
+// }
+
+
+// Pressable in React Native
+
+import { Pressable, StyleSheet, Text, View } from 'react-native'
+import React from 'react'
+
 const App = () => {
-  const [showModal, setShowModal] = useState(false);
-
-  return(
-    <View style={styles.main}>
-    <Text>Modal in React Native (Dialog Box)</Text>
-      <Modal
-      transparent={true}
-      visible={showModal}
-      animationType='slide'
-        >
-        <View style={styles.centerView}>
-          <View style={styles.modalView}>
-            <Text style={{fontSize:30, marginBottom:20}}>Hello Code Step by step</Text>
-            <Button 
-              title='close modal'
-              onPress={() => setShowModal(false)}
-            />
-          </View>
-        </View>
-      </Modal>    
-      <View style={styles.buttonView}>
-      <Button 
-        title='open Madal'
-        onPress={() => setShowModal(true)}
-      />
-      </View>
-
+  return (
+    <View style={{ styles.main }}>
+      <Pressable
+        onPress={() => console.warn("normal on Press")}
+        onLongPress={() => console.warn("long press")}
+        onLongPress={() => console.warn("long press")}
+        onPressIn={() => console.warn("press In")}
+        onPressOut={() => console.warn("press Out")}
+      >
+        <Text style={styles.pressableBtn}>Pressable</Text>
+      </Pressable>
     </View>
   )
 }
 
+export default App
+
 const styles = StyleSheet.create({
   main: {
-    flex: 1,
-  },
-  buttonView: {
-    flex: 1,
-    justifyContent: 'flex-end',
-  },
-  centerView: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center'
   },
-  modalView: {
-    backgroundColor: '#fff',
-    padding: 30,
+  pressableBtn: {
+    backgroundColor: 'red',
+    padding: 10,
     borderRadius: 10,
-    width: 300,
-    height: 300,
-    alignItems: 'center',
+    width: 100,
+    height: 100,
     justifyContent: 'center',
-    shadowColor: 'black',
-    elevation:10 
+    alignItems: 'center',
+    fontSize: 20
   }
-  
 })
-
-
-export default App

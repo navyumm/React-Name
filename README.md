@@ -361,10 +361,22 @@ Question : Can we use life Cycle in functional and Class Components
 
 -- whereas apple me hum bss : small, medium and large hi de sakte hai.
 
-## Modal in React Native (Dialog Box)
+## Modal in React Native ( Dialog Box )
 
 * Import button and Modal
 * Add style to button and Modal
 * Show and Hide Modal with State
 
 --  Where we want to show quik information, warning, error messages and to update any field there we use Modal.
+
+## Pressable in React Native ( New )
+
+* Use of Pressable
+* Add Style to the button
+* Check all Event
+
+-- Hum Pressable use tab karte hai, jab humko ek hi button pr ek se zyada event lgane ho. iska use hum gaming controller se samjh sakte hai.
+
+-- Ab maan lo game me gun ka button hai, jab hum gun pr single press karte hai toh, ek bullet fire hoti hai, or agar press karke rakhte hai toh bullet fire hoti jaati hai, or jab chord dete hai, gun down ho jaati hai..
+
+-- onLongPress event me 500 millisecound hold karne se ye event call hota hai, aur hum isko change bhi kar sakte hai.
