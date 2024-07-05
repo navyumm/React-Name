@@ -380,3 +380,10 @@ Question : Can we use life Cycle in functional and Class Components
 -- Ab maan lo game me gun ka button hai, jab hum gun pr single press karte hai toh, ek bullet fire hoti hai, or agar press karke rakhte hai toh bullet fire hoti jaati hai, or jab chord dete hai, gun down ho jaati hai..
 
 -- onLongPress event me 500 millisecound hold karne se ye event call hota hai, aur hum isko change bhi kar sakte hai.
+
+## Status Bar in React Native
+
+* What is State Bar
+* How to Update Style for Status Bar
+* Hide and Show Status Bar
+* Update Statis with Button Press

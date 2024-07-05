@@ -1077,22 +1077,76 @@
 
 
 // Pressable in React Native
+// {
+// import { Pressable, StyleSheet, Text, View } from 'react-native'
+// import React from 'react'
 
-import { Pressable, StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+// const App = () => {
+//   return (
+//     <View style={{ styles.main }}>
+//       <Pressable
+//         onPress={() => console.warn("normal on Press")}
+//         onLongPress={() => console.warn("long press")}
+//         onLongPress={() => console.warn("long press")}
+//         onPressIn={() => console.warn("press In")}
+//         onPressOut={() => console.warn("press Out")}
+//       >
+//         <Text style={styles.pressableBtn}>Pressable</Text>
+//       </Pressable>
+//     </View>
+//   )
+// }
+
+// export default App
+
+// const styles = StyleSheet.create({
+//   main: {
+//     flex: 1,
+//     justifyContent: 'center',
+//     alignItems: 'center'
+//   },
+//   pressableBtn: {
+//     backgroundColor: 'red',
+//     padding: 10,
+//     borderRadius: 10,
+//     width: 100,
+//     height: 100,
+//     justifyContent: 'center',
+//     alignItems: 'center',
+//     fontSize: 20
+//   }
+// })
+// }
+
+
+
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+
+
+
+// Status Bar 
+import { Button, StatusBar, StyleSheet, Text, View } from 'react-native'
+import React, { useState } from 'react'
+
 
 const App = () => {
+  const [hide, setHide] = useState(false)
+  const [barStyle, setBarStyle] = useState("default")
+
   return (
-    <View style={{ styles.main }}>
-      <Pressable
-        onPress={() => console.warn("normal on Press")}
-        onLongPress={() => console.warn("long press")}
-        onLongPress={() => console.warn("long press")}
-        onPressIn={() => console.warn("press In")}
-        onPressOut={() => console.warn("press Out")}
-      >
-        <Text style={styles.pressableBtn}>Pressable</Text>
-      </Pressable>
+    <View style={styles.main}>
+      <StatusBar 
+        backgroundColor='red'
+        // barStyle='light-content'
+        barStyle={barStyle}
+        hidden={false}
+      />
+
+      <Button title='toggle Status Bar' onPress={()=>setHide(!hide)}/>
+      <Button title='Update style' onPress={()=>setBarStyle('dark-content')}/>
     </View>
   )
 }
@@ -1104,15 +1158,5 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center'
-  },
-  pressableBtn: {
-    backgroundColor: 'red',
-    padding: 10,
-    borderRadius: 10,
-    width: 100,
-    height: 100,
-    justifyContent: 'center',
-    alignItems: 'center',
-    fontSize: 20
-  }
+    }
 })
