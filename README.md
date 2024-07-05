@@ -440,3 +440,13 @@ Question : Can we use life Cycle in functional and Class Components
 * The Style for single screen
 * Common Style for all screen
 * Change the title of the screen
+
+-- Idhar hum stack.screen me options naam se attributes me changes likhte hai, kisi ek screen ke liye.
+
+-- aur If hum chahte hai same change sab me rahe toh hum Stack.Navigator me ScreenOptions ke naam se property lgate hai..
+
+## Stack Navigation Button and Component
+
+* Add a Button in the Navigation.
+* Action on the Navigation Button.
+* Add Component in Navigation
