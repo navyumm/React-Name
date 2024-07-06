@@ -1284,67 +1284,157 @@
 
 
 // Navigation with React-Native // Stack Navigation // Stack Navigation style
+// {
+// import { View, Text, Button, TextInput } from 'react-native'
+// import React from 'react'
+// import { NavigationContainer } from '@react-navigation/native'
+// import { createNativeStackNavigator } from '@react-navigation/native-stack'
+// import Login from './screens/LoginScreen';
+// import Home from './screens/HomeScreen';
+// import Header from './components/HeaderComponent';
 
-import { View, Text, Button, TextInput } from 'react-native'
+
+// const Stack = createNativeStackNavigator();
+// const App = () => {
+
+//   const btnAction = () => {
+//     console.warn('button pressed');
+//   }
+
+//   return (
+//     <NavigationContainer>
+//       <Stack.Navigator
+//                 screenOptions={{
+//             title: "User login",
+//             headerStyle: {
+//               backgroundColor: '#f4511e',
+//             },
+//             headerTitleStyle:{
+//               fontSize:30
+//             },
+//             headerTintColor: 'orange'
+//             }}
+//       >
+
+//         <Stack.Screen
+//           name="Login"
+//           component={Login}
+//           options={{
+//             headerTitle:( )=> <Button title='left' onPress={btnAction}/>,
+//             headerRight:( )=> <Header />,
+//             title: "User login",
+//             headerStyle: {
+//               backgroundColor: '#fff',
+//             },
+//             headerTitleStyle:{
+//               fontSize:30
+//             },
+//             headerTintColor: 'orange'
+//             }}
+//         />
+
+//         <Stack.Screen
+//           name="Home"
+//           component={Home}
+//         />
+
+//       </Stack.Navigator>
+//     </NavigationContainer>
+//   )
+// }
+
+
+// export default App
+// }
+
+
+// -----------------------------------------
+// -----------------------------------------
+// -----------------------------------------
+
+
+// Tab Navigation // Bottom
+// {
+// import { View, Text } from 'react-native'
+// import React from 'react'
+// import { NavigationContainer } from '@react-navigation/native'
+// import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+
+
+// const Tab = createBottomTabNavigator();
+
+// const App = () => {
+//   return (
+//     <NavigationContainer>
+//       <Tab.Navigator>
+//         <Tab.Screen name="Login" component={Login} />
+//         <Tab.Screen name="SignUp" component={SignUp} />
+//       </Tab.Navigator>
+//     </NavigationContainer>
+//   )
+// }
+
+// const Login= () => {
+//   return (
+//     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center'
+//     }}>
+//       <Text style={{fontSize:25}}>Login Screen</Text>
+//     </View>
+//     )
+// }
+
+// const SignUp= () => {
+//   return (
+//     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center'
+//     }}>
+//       <Text style={{fontSize:25}}>SignUp Screen</Text>
+//     </View>
+//     )
+// }
+
+// export default App
+// }
+
+
+
+// Top Tab navigatiom
+
+import { View, Text } from 'react-native'
 import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
-import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import Login from './screens/LoginScreen';
-import Home from './screens/HomeScreen';
-import Header from './components/HeaderComponent';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs'
 
 
-const Stack = createNativeStackNavigator();
+const Tab = createMaterialTopTabNavigator();
+
 const App = () => {
-
-  const btnAction = () => {
-    console.warn('button pressed');
-  }
-
   return (
     <NavigationContainer>
-      <Stack.Navigator
-                screenOptions={{
-            title: "User login",
-            headerStyle: {
-              backgroundColor: '#f4511e',
-            },
-            headerTitleStyle:{
-              fontSize:30
-            },
-            headerTintColor: 'orange'
-            }}
-      >
-
-        <Stack.Screen
-          name="Login"
-          component={Login}
-          options={{
-            headerTitle:( )=> <Button title='left' onPress={btnAction}/>,
-            headerRight:( )=> <Header />,
-            title: "User login",
-            headerStyle: {
-              backgroundColor: '#fff',
-            },
-            headerTitleStyle:{
-              fontSize:30
-            },
-            headerTintColor: 'orange'
-            }}
-        />
-
-        <Stack.Screen
-          name="Home"
-          component={Home}
-        />
-
-      </Stack.Navigator>
+      <Tab.Navigator>
+        <Tab.Screen name="Login" component={Login} />
+        <Tab.Screen name="SignUp" component={SignUp} />
+      </Tab.Navigator>
     </NavigationContainer>
   )
 }
 
+const Login= () => {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center'
+    }}>
+      <Text style={{fontSize:25}}>Login Screen</Text>
+    </View>
+    )
+}
 
-
-
+const SignUp= () => {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center'
+    }}>
+      <Text style={{fontSize:25}}>SignUp Screen</Text>
+    </View>
+    )
+}
 
 export default App

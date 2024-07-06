@@ -450,3 +450,44 @@ Question : Can we use life Cycle in functional and Class Components
 * Add a Button in the Navigation.
 * Action on the Navigation Button.
 * Add Component in Navigation
+
+-- options me headerTitle or headerRight ke naam se key hai usme kuch bhi paas karwa sakte hai
+
+## Pass Data Between Screen
+
+* Pass Static data from one screen to another screen
+* Access data and display state
+* Pass Text input data in screens
+
+## Tab Navigation
+
+* Install NPM tab package.
+* Make 2 Component for the screen
+* Make Tab Navigation Wrapper.
+* npm start --clean-cache
+
+### Bottom Tab Navigation
+
+* Install the NPM bottom package
+* Update Code for Navigation
+* npm start --clean-cache
+
+### Top Tab Navigation
+
+* Install the NPM Top Package
+* Update Code for Navigation
+* npm start --clean-cache
+
+
+### Bottom Tab Navigation
+
+* Install the NPM bottom package
+* Update Code for Navigation
+* npm start --clean-cache
+
+
+### Bottom Tab Navigation
+
+* Install the NPM bottom package
+* Update Code for Navigation
+* npm start --clean-cache
