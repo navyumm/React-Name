@@ -478,16 +478,13 @@ Question : Can we use life Cycle in functional and Class Components
 * Update Code for Navigation
 * npm start --clean-cache
 
-
-### Bottom Tab Navigation
-
-* Install the NPM bottom package
-* Update Code for Navigation
-* npm start --clean-cache
+<!-- ------------------------------------------------- -->
 
 
-### Bottom Tab Navigation
+## Simple API call
 
-* Install the NPM bottom package
-* Update Code for Navigation
-* npm start --clean-cache
+* Make a Function for the API call
+* Store API data in the state 
+* Display API data in the screen
+
+-- phle humne ek function bnaya or usmai api call karva kar axios ke through fetch karke setData state me uska result set kar diya, then useEffect ke through usai call karwa liya and return me condition ke through check kar liya data undefined hai ya nhi. aur url me se sb kuch screen pr show karwa diya.

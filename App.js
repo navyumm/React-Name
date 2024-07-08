@@ -1398,43 +1398,89 @@
 
 
 // Top Tab navigatiom
+// {
+// import { View, Text } from 'react-native'
+// import React from 'react'
+// import { NavigationContainer } from '@react-navigation/native'
+// import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+// import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs'
 
+
+// const Tab = createMaterialTopTabNavigator();
+
+// const App = () => {
+//   return (
+//     <NavigationContainer>
+//       <Tab.Navigator>
+//         <Tab.Screen name="Login" component={Login} />
+//         <Tab.Screen name="SignUp" component={SignUp} />
+//       </Tab.Navigator>
+//     </NavigationContainer>
+//   )
+// }
+
+// const Login= () => {
+//   return (
+//     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center'
+//     }}>
+//       <Text style={{fontSize:25}}>Login Screen</Text>
+//     </View>
+//     )
+// }
+
+// const SignUp= () => {
+//   return (
+//     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center'
+//     }}>
+//       <Text style={{fontSize:25}}>SignUp Screen</Text>
+//     </View>
+//     )
+// }
+
+// export default App
+// }
+
+
+// ---------------------------------------
+// ---------------------------------------
+// ---------------------------------------
+
+
+// Simple API 
 import { View, Text } from 'react-native'
-import React from 'react'
-import { NavigationContainer } from '@react-navigation/native'
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs'
-
-
-const Tab = createMaterialTopTabNavigator();
+import React, { useEffect } from 'react'
 
 const App = () => {
+
+  const [data, setData] = useState(undefined);
+
+  const getAPIData = async () => {
+    // api call
+      // console.warn("hello");
+      const url = "https://jsonplaceholder.typicode.com/posts/1";
+      let result = await fetch(url);
+      result = await result.json();
+      console.warn(result);
+      setData(result)
+  }
+
+  useEffect(() => {
+    getAPIData();
+  }, [])
+
+  
   return (
-    <NavigationContainer>
-      <Tab.Navigator>
-        <Tab.Screen name="Login" component={Login} />
-        <Tab.Screen name="SignUp" component={SignUp} />
-      </Tab.Navigator>
-    </NavigationContainer>
+    <View>
+      {
+        data ? <View>
+          <Text style={{fontSize: 30}}> {data.id}</Text>
+          <Text style={{fontSize: 30}}> {data.userId}</Text>
+          <Text style={{fontSize: 30}}> {data.title}</Text>
+          <Text style={{fontSize: 30}}> {data.body}</Text>
+        </View> : null
+      }
+    </View>
   )
-}
-
-const Login= () => {
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center'
-    }}>
-      <Text style={{fontSize:25}}>Login Screen</Text>
-    </View>
-    )
-}
-
-const SignUp= () => {
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center'
-    }}>
-      <Text style={{fontSize:25}}>SignUp Screen</Text>
-    </View>
-    )
 }
 
 export default App
