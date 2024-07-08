@@ -1447,39 +1447,87 @@
 
 
 // Simple API 
-import { View, Text } from 'react-native'
-import React, { useEffect } from 'react'
+// {
+// import { View, Text } from 'react-native'
+// import React, { useEffect } from 'react'
+
+// const App = () => {
+
+//   const [data, setData] = useState(undefined);
+
+//   const getAPIData = async () => {
+//     // api call
+//       // console.warn("hello");
+//       const url = "https://jsonplaceholder.typicode.com/posts/1";
+//       let result = await fetch(url);
+//       result = await result.json();
+//       console.warn(result);
+//       setData(result)
+//   }
+
+//   useEffect(() => {
+//     getAPIData();
+//   }, [])
+
+  
+//   return (
+//     <View>
+//       {
+//         data ? <View>
+//           <Text style={{fontSize: 30}}> {data.id}</Text>
+//           <Text style={{fontSize: 30}}> {data.userId}</Text>
+//           <Text style={{fontSize: 30}}> {data.title}</Text>
+//           <Text style={{fontSize: 30}}> {data.body}</Text>
+//         </View> : null
+//       }
+//     </View>
+//   )
+// }
+
+// export default App
+// }
+
+
+// List with API
+import { View, Text, ScrollView } from 'react-native'
+import React, { useState } from 'react'
 
 const App = () => {
 
-  const [data, setData] = useState(undefined);
+  const [data, setData] = useState([]);
 
   const getAPIData = async () => {
     // api call
-      // console.warn("hello");
-      const url = "https://jsonplaceholder.typicode.com/posts/1";
-      let result = await fetch(url);
-      result = await result.json();
-      console.warn(result);
-      setData(result)
+    const url = "https://jsonplaceholder.typicode.com/posts"
+    let result = await fetch(url);
+    result = await result.json();
+    setData(result);
+
   }
 
   useEffect(() => {
     getAPIData();
-  }, [])
 
-  
+  }, []);
+
+
   return (
-    <View>
+    <ScrollView>
+      <Text style={{fontSize:30}}>List with API</Text>
       {
-        data ? <View>
-          <Text style={{fontSize: 30}}> {data.id}</Text>
-          <Text style={{fontSize: 30}}> {data.userId}</Text>
-          <Text style={{fontSize: 30}}> {data.title}</Text>
-          <Text style={{fontSize: 30}}> {data.body}</Text>
-        </View> : null
+        data.length ? 
+        data.map((item, index) => 
+          <View style={{padding:10, borderBottomColor: "#ccc", borderBottomWidth:1}}>
+            <Text style={{fontSize: 20, backgroundColor: "#ddd"}}> Id : {item.id}</Text>
+            <Text style={{fontSize: 30}}> {item.userId}</Text>
+            <Text style={{fontSize: 30}}> Title : {item.title}</Text>
+            <Text style={{fontSize: 30}}> Body : {item.body}</Text>
+          </View>
+        )
+        : 
+        null
       }
-    </View>
+    </ScrollView>
   )
 }
 

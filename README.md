@@ -488,3 +488,11 @@ Question : Can we use life Cycle in functional and Class Components
 * Display API data in the screen
 
 -- phle humne ek function bnaya or usmai api call karva kar axios ke through fetch karke setData state me uska result set kar diya, then useEffect ke through usai call karwa liya and return me condition ke through check kar liya data undefined hai ya nhi. aur url me se sb kuch screen pr show karwa diya.
+
+
+
+## List with API 
+
+* Make function to Call API
+* Use map function to render Data
+* Add Style and ScrollView
