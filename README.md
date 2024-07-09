@@ -496,3 +496,10 @@ Question : Can we use life Cycle in functional and Class Components
 * Make function to Call API
 * Use map function to render Data
 * Add Style and ScrollView
+
+
+## FlatList with API
+
+* Make function to Call API
+* Use FlatList to render Data
+* Add Style
