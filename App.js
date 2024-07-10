@@ -1566,7 +1566,11 @@ const App = () => {
         data.length ? 
         <FlatList 
           data={data}
-          renderItem={}
+          renderItem={({item}) => <View style={{borderBlockColor:'orange', padding:10}}>
+          <Text style={{fontSize: 20, backgroundColor: "#ddd"}}> Id : {item.id}</Text>
+          <Text style={{fontSize: 20, backgroundColor: "#ddd"}}> Title : {item.title}</Text>
+          <Text style={{fontSize: 20, backgroundColor: "#ddd"}}> Body : {item.body}</Text>
+          </View>}
         />
         : 
         null
