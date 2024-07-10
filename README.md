@@ -525,3 +525,11 @@ Question : Can we use life Cycle in functional and Class Components
 * Test Post API Method for store data
 * Test Put API Method for update data
 * Test Delete API Method for delete data
+
+
+## Simple Post API
+
+* Make Button and function to Call API
+* Write code to call Post API and test
+
+
