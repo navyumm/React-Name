@@ -543,3 +543,10 @@ Question : Can we use life Cycle in functional and Class Components
 * Make Input Field 
 * Store Input field Data in State
 * Write code to call Post API and test
+
+
+## Simple Form Validation
+
+* Define states for error and validation 
+* Show Error Message
+* Add style to error message

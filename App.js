@@ -1632,7 +1632,78 @@
 
 
 //  Post API with Input Field
-import { View, Text, TextInput, Button } from 'react-native'
+// {
+// import { View, Text, TextInput, Button } from 'react-native'
+// import React from 'react'
+// import { useState } from 'react';
+
+// const App = () => {
+//   const [name, setName] = useState("");
+//   const [age, setAge] = useState(0);
+//   const [email, setEmail] = useState("");
+
+//   const saveData = async () => {
+//     // console.warn(name);
+//     // console.warn(age);
+//     // console.warn(email);
+
+//     const url = "http://10.0.2.2:3000/users";
+//     let result = await fetch(url, {
+//       method: "POST",
+//       headers: {
+//         "Content-Type": "application/json"
+//       },
+//       body: JSON.stringify({
+//         name: name,
+//         age: age,
+//         email: email
+//       })
+//     })
+//     result = await result.json();
+//     console.warn("data added");
+//     setName(name)
+//   }
+
+//   return (
+//     <View>
+//       <Text style={{ fontSize: 30 }}>Post API with Input Field</Text>
+
+//       <TextInput
+//         placeholder='Enter Name'
+//         value={name}
+//         onChangeText={(text) => setName(text)}
+//         style={{ borderWidth: 1, borderColor: 'black', padding: 10, fontSize: 20 }}
+//       />
+
+//       <TextInput
+//         placeholder='Enter Age'
+//         value={age}
+//         onChangeText={(text) => setAge(text)}
+//         style={{ borderWidth: 1, borderColor: 'black', padding: 10, fontSize: 20 }}
+//       />
+
+//       <TextInput
+//         placeholder='Enter Email'
+//         value={email}
+//         onChangeText={(text) => setEmail(text)}
+//         style={{ borderWidth: 1, borderColor: 'black', padding: 10, fontSize: 20 }}
+//       />
+
+//       <Button
+//         title='Save Data'
+//         onPress={saveData}
+//       />
+//     </View>
+//   )
+// }
+
+// export default App
+// }
+
+
+
+// Simple Form Validation
+import { View, Text, TextInput, Button, StyleSheet } from 'react-native'
 import React from 'react'
 import { useState } from 'react';
 
@@ -1641,10 +1712,50 @@ const App = () => {
   const [age, setAge] = useState(0);
   const [email, setEmail] = useState("");
 
+
+  const [nameError, setNameError] = useState(false);
+  const [ageError, setAgeError] = useState(false);
+  const [emailError, setEmailError] = useState(false);
+
+
   const saveData = async () => {
     // console.warn(name);
     // console.warn(age);
     // console.warn(email);
+
+    if(!name){
+      setNameError(true);
+    }else{
+      setNameError(false);
+    }
+
+    // alternative
+    // {
+    //   name ? setNameError(false) : setEmailError(true) ;
+    // }
+
+    if(!age){
+      setAgeError(true);
+    }else{
+      setAgeError(false);
+    }
+    // alternative
+    // setAgeError(!age ? true : false);
+
+
+    if(!email){
+      setEmailError(true);
+    }else{
+      setEmailError(false);
+    }
+    // alternative
+    // setEmailError(!email)
+
+    if(!name || !age || !email){
+      return false
+    }
+
+    console.warn("stop");
 
     const url = "http://10.0.2.2:3000/users";
     let result = await fetch(url, {
@@ -1665,28 +1776,37 @@ const App = () => {
 
   return (
     <View>
-      <Text style={{ fontSize: 30 }}>Post API with Input Field</Text>
+      <Text style={{ fontSize: 30 }}>Simple Form Validation</Text>
 
       <TextInput
         placeholder='Enter Name'
         value={name}
         onChangeText={(text) => setName(text)}
-        style={{ borderWidth: 1, borderColor: 'black', padding: 10, fontSize: 20 }}
+        style={styles.input}
       />
+      {
+        nameError ? <Text style={styles.errorText}>Please Enter Valid Name </Text> : null
+      }
 
       <TextInput
         placeholder='Enter Age'
         value={age}
         onChangeText={(text) => setAge(text)}
-        style={{ borderWidth: 1, borderColor: 'black', padding: 10, fontSize: 20 }}
+        style={styles.input}
       />
+      {
+        ageError ? <Text style={styles.errorText}>Please Enter Valid Age </Text> : null
+      }
 
       <TextInput
         placeholder='Enter Email'
         value={email}
         onChangeText={(text) => setEmail(text)}
-        style={{ borderWidth: 1, borderColor: 'black', padding: 10, fontSize: 20 }}
+        style={styles.input}
       />
+      {
+        emailError ? <Text style={styles.errorText}>Please Enter Valid Email </Text> : null
+      }
 
       <Button
         title='Save Data'
@@ -1695,5 +1815,20 @@ const App = () => {
     </View>
   )
 }
+
+const styles = StyleSheet.create({
+  input: {
+    margin:20,
+    borderWidth: 1,
+    borderColor: 'orange',
+    padding: 10,
+    fontSize: 20,
+    marginBottom:5
+  },
+  errorText: {
+    color: 'red',
+    marginLeft:20
+  }
+})
 
 export default App
