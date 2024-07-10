@@ -1,5 +1,5 @@
 {
-  "users":[
+  "users": [
     {
       "id": 1,
       "name": "John Doe",
@@ -11,6 +11,24 @@
       "name": "Jane Doe",
       "email": "jane.doe@example.com",
       "age": 27
-      }
+    },
+    {
+      "id": 3,
+      "name": "Bob Smith",
+      "email": "bob.smith@example.com",
+      "age": 35
+    },
+    {
+      "id": 4,
+      "name": "Alice Brown",
+      "email": "alice.brown@example.com",
+      "age": 32
+    },
+    {
+      "id": 5,
+      "name": "Mike Johnson",
+      "email": "mike.johnson@example.com",
+      "age": 42
+    }
   ]
 }

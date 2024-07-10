@@ -515,3 +515,13 @@ Question : Can we use life Cycle in functional and Class Components
 * Make db file and a simple file 
 * Get API data with Postman
 * Run JSON-Server ( json-server --watch db.json )
+
+
+## Test JSON-Server API with Postman
+
+* Install Postman
+* Api Method Name
+* Test Get API Method for fetch data
+* Test Post API Method for store data
+* Test Put API Method for update data
+* Test Delete API Method for delete data
