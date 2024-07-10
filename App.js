@@ -1585,19 +1585,66 @@
 
 
 // API with JSON-Server
-import { View, Text, Button } from 'react-native'
+// {
+// import { View, Text, Button } from 'react-native'
+// import React from 'react'
+
+// const App = () => {
+//   const saveAPIData = async () => {
+
+//     // console.warn("test");
+
+//     const data = {
+//       name: "Rahul",
+//       age: 34,
+//       email: "rahul@gmail.com"
+//     }
+
+//     const url = "http://10.0.2.2:3000/users";
+//     let result = await fetch(url, {
+//       method: "POST",
+//       headers: {
+//         "Content-Type": "application/json"
+//       },
+//       body: JSON.stringify(data)
+//     });
+//     result = await result.json();
+//     console.warn(result);
+//   }
+
+//   return (
+//     <View>
+//       <Text style={{ fontSize: 30 }}>Post API call</Text>
+//       <Button title='Save Data' onPress={saveAPIData} />
+//     </View>
+//   )
+// }
+
+// export default App
+// }
+
+
+
+// --------------------------------------
+// --------------------------------------
+// --------------------------------------
+
+
+
+//  Post API with Input Field
+import { View, Text, TextInput, Button } from 'react-native'
 import React from 'react'
+import { useState } from 'react';
 
 const App = () => {
-  const saveAPIData = async () => {
+  const [name, setName] = useState("");
+  const [age, setAge] = useState(0);
+  const [email, setEmail] = useState("");
 
-    // console.warn("test");
-
-    const data = {
-      name: "Rahul",
-      age: 34,
-      email: "rahul@gmail.com"
-    }
+  const saveData = async () => {
+    // console.warn(name);
+    // console.warn(age);
+    // console.warn(email);
 
     const url = "http://10.0.2.2:3000/users";
     let result = await fetch(url, {
@@ -1605,16 +1652,46 @@ const App = () => {
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify(data)
-    });
+      body: JSON.stringify({
+        name: name,
+        age: age,
+        email: email
+      })
+    })
     result = await result.json();
-    console.warn(result);
+    console.warn("data added");
+    setName(name)
   }
 
   return (
     <View>
-      <Text style={{ fontSize: 30 }}>Post API call</Text>
-      <Button title='Save Data' onPress={saveAPIData} />
+      <Text style={{ fontSize: 30 }}>Post API with Input Field</Text>
+
+      <TextInput
+        placeholder='Enter Name'
+        value={name}
+        onChangeText={(text) => setName(text)}
+        style={{ borderWidth: 1, borderColor: 'black', padding: 10, fontSize: 20 }}
+      />
+
+      <TextInput
+        placeholder='Enter Age'
+        value={age}
+        onChangeText={(text) => setAge(text)}
+        style={{ borderWidth: 1, borderColor: 'black', padding: 10, fontSize: 20 }}
+      />
+
+      <TextInput
+        placeholder='Enter Email'
+        value={email}
+        onChangeText={(text) => setEmail(text)}
+        style={{ borderWidth: 1, borderColor: 'black', padding: 10, fontSize: 20 }}
+      />
+
+      <Button
+        title='Save Data'
+        onPress={saveData}
+      />
     </View>
   )
 }

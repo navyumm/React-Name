@@ -533,3 +533,13 @@ Question : Can we use life Cycle in functional and Class Components
 * Write code to call Post API and test
 
 
+-----------------------------------------
+-----------------------------------------
+-----------------------------------------
+
+
+## POST API with Input Field
+
+* Make Input Field 
+* Store Input field Data in State
+* Write code to call Post API and test
