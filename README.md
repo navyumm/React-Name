@@ -503,3 +503,15 @@ Question : Can we use life Cycle in functional and Class Components
 * Make function to Call API
 * Use FlatList to render Data
 * Add Style
+
+
+<!-- ---------------------------------------- -->
+
+
+
+## Make API with JSON-Server
+
+* Install JSON-Server
+* Make db file and a simple file 
+* Get API data with Postman
+* Run JSON-Server ( json-server --watch db.json )

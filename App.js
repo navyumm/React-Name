@@ -1536,45 +1536,62 @@
 // }
 
 
-// 
-import { View, Text, ScrollView, FlatList } from 'react-native'
-import React, { useEffect, useState } from 'react'
+// FlatList with API
+// {
+// import { View, Text, ScrollView, FlatList } from 'react-native'
+// import React, { useEffect, useState } from 'react'
+
+// const App = () => {
+
+//   const [data, setData] = useState([]);
+
+//   const getAPIData = async () => {
+//     // api call
+//     const url = "https://jsonplaceholder.typicode.com/posts"
+//     let result = await fetch(url);
+//     result = await result.json();
+//     setData(result);
+
+//   }
+
+//   useEffect(() => {
+//     getAPIData();
+
+//   }, []);
+
+
+//   return (
+//     <View>
+//       <Text style={{fontSize:30}}>List with API</Text>
+//       {
+//         data.length ? 
+//         <FlatList 
+//           data={data}
+//           renderItem={({item}) => <View style={{borderBlockColor:'orange', padding:10}}>
+//           <Text style={{fontSize: 20, backgroundColor: "#ddd"}}> Id : {item.id}</Text>
+//           <Text style={{fontSize: 20, backgroundColor: "#ddd"}}> Title : {item.title}</Text>
+//           <Text style={{fontSize: 20, backgroundColor: "#ddd"}}> Body : {item.body}</Text>
+//           </View>}
+//         />
+//         : 
+//         null
+//       }
+//     </View>
+//   )
+// }
+
+// export default App
+// }
+
+
+// API with JSON-Server
+import { View, Text } from 'react-native'
+import React from 'react'
 
 const App = () => {
-
-  const [data, setData] = useState([]);
-
-  const getAPIData = async () => {
-    // api call
-    const url = "https://jsonplaceholder.typicode.com/posts"
-    let result = await fetch(url);
-    result = await result.json();
-    setData(result);
-
-  }
-
-  useEffect(() => {
-    getAPIData();
-
-  }, []);
-
-
   return (
     <View>
-      <Text style={{fontSize:30}}>List with API</Text>
-      {
-        data.length ? 
-        <FlatList 
-          data={data}
-          renderItem={({item}) => <View style={{borderBlockColor:'orange', padding:10}}>
-          <Text style={{fontSize: 20, backgroundColor: "#ddd"}}> Id : {item.id}</Text>
-          <Text style={{fontSize: 20, backgroundColor: "#ddd"}}> Title : {item.title}</Text>
-          <Text style={{fontSize: 20, backgroundColor: "#ddd"}}> Body : {item.body}</Text>
-          </View>}
-        />
-        : 
-        null
-      }
+      <Text>App</Text>
     </View>
   )
 }
