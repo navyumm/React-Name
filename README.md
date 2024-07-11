@@ -564,3 +564,10 @@ Question : Can we use life Cycle in functional and Class Components
 * Make and call function for deleting API
 * Write code to delete API
 * Reload data after deleting user
+
+
+## Modal For Update API
+
+* Make Modal and Add Style
+* Open and Close Modal on Button
+* Pass Data to Modal
