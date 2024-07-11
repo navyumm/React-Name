@@ -550,3 +550,12 @@ Question : Can we use life Cycle in functional and Class Components
 * Define states for error and validation 
 * Show Error Message
 * Add style to error message
+
+
+## Make List From API
+
+* Fetch Data from API
+* Display Data in List
+* Add Style to List
+
+
