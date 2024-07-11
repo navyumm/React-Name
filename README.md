@@ -580,3 +580,8 @@ Question : Can we use life Cycle in functional and Class Components
 * Populate data in Input fields
 
 
+## Integrate API with PUT Method
+
+* Collect data from input fields
+* Call API with PUT method
+* Close dialog and Update List
