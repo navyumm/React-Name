@@ -1838,7 +1838,7 @@
 
 
 // Make List From API
-import { View, Text, StyleSheet, Button, Modal } from 'react-native'
+import { View, Text, StyleSheet, Button, Modal, TextInput } from 'react-native'
 import React from 'react'
 import { useState } from 'react';
 
@@ -1924,13 +1924,47 @@ const App = () => {
 
 const userModal = (props) => {
   console.log(props.selectedUser);
+
+  const [name, setName] = useState(undefined);
+  const [age, setAge] = useState(undefined);
+  const [email, setEmail] = useState(undefined);
+
+  useEffect(() => {
+
+    if (props.selectedUser) {
+      setName(props.selectedUser.name);
+      setAge(props.selectedUser.age.toString());
+      setEmail(props.selectedUser.email);
+    }
+  }, [props.selectedUser]);
   return (
     <View style={styles.centeredView}>
       <View style={styles.modalView}>
-        <Text>
-          {/* Dummy Modal */}
+
+        <TextInput
+          style={styles.input}
+          value={name}
+        />
+        <TextInput
+          style={styles.input}
+          value={age}
+        />
+        <TextInput
+          style={styles.input}
+          value={email}
+        />
+
+        <View style={{ marginBottom: 15 }}>
+          <Button
+            title='update'
+          />
+        </View>
+
+        {/* <Text>
+          Dummy Modal
           {props.selectedUser.name}
-        </Text>
+        </Text> */}
+
         <Button
           title='close'
           onPress={() => props.setShowModal(false)}
@@ -1974,6 +2008,15 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
     elevation: 5
   },
+  input: {
+    // height: 40,
+    width: 300,
+    marginBottom: 15,
+    borderWidth: 1,
+    padding: 10,
+    borderColor: 'skyblue',
+    fontSize:20
+  }
 })
 
 export default App

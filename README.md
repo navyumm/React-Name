@@ -571,3 +571,12 @@ Question : Can we use life Cycle in functional and Class Components
 * Make Modal and Add Style
 * Open and Close Modal on Button
 * Pass Data to Modal
+
+
+## Populate Data in Input firlds
+
+* Make Input fields
+* Put data in states
+* Populate data in Input fields
+
+
