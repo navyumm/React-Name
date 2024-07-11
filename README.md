@@ -559,3 +559,8 @@ Question : Can we use life Cycle in functional and Class Components
 * Add Style to List
 
 
+## Delete API
+
+* Make and call function for deleting API
+* Write code to delete API
+* Reload data after deleting user

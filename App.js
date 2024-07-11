@@ -1856,6 +1856,19 @@ const App = () => {
     }
   }
 
+  const deleteUser = async (id) => {
+    const url = "http://10.0.2.2:3000/users";
+    // console.warn(`${url}/${id}`);
+    let result = await fetch(`${url}/${id}`,{
+      method: "DELETE"
+    });
+    result = await result.json();
+    if (result) {
+      console.warn("User deleted");
+      getAPIData();
+      }
+  }
+
   useEffect(() => {
     getAPIData();
   }, []);
@@ -1877,9 +1890,12 @@ const App = () => {
           data.map((item) => <View style={styles.dataWrapper}>
             <View style={{ flex: 1 }}><Text>{item.name}</Text></View>
             <View style={{ flex: 1 }}><Text>{item.age}</Text></View>
-            {/* <View style={{flex:1}}><Text>{item.email}</Text></View> */}
 
-            <View style={{ flex: 1 }}><Button title='Delete' /></View>
+            <View style={{ flex: 1 }}>
+            <Button 
+            title='Delete'
+            onPress={() => deleteUser(item.id)}
+            /></View>
             <View style={{ flex: 1 }}><Button title='Update' /></View>
           </View>)
           : null
