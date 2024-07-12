@@ -625,5 +625,17 @@ Question : Can we use life Cycle in functional and Class Components
 -- for ios = ios -> yourAppName -> Image.xcassets : me jakar ios ke icon ka folder paste kar do
 
 
+---------------------------------------------------
+---------------------------------------------------
 
+
+## async-storage in React Native
+
+* What is async-storage
+* Install async-storage
+* Use async-storage
+  * set data
+  * Get data
+  * Revome data
+  
 

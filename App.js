@@ -2109,58 +2109,111 @@
 
 
 // Ref in RN
-import { View, Text, TextInput, StyleSheet, Button } from 'react-native'
+// {
+// import { View, Text, TextInput, StyleSheet, Button } from 'react-native'
+// import React from 'react'
+// import { useRef } from 'react';
+// import { Colors } from 'react-native/Libraries/NewAppScreen';
+
+// const App = () => {
+
+//   const input = useRef();
+
+//   const updateInput = () => {
+//     console.warn("call");
+//     input.current.focus();
+//     input.current.setNativeProps({
+//       color:'red',
+//       fontSize:20
+//     })
+//   }
+
+//   return (
+//     <View>
+//       <TextInput
+//         ref={input}
+//         placeholder='Enter Name'
+//         style={styles.input}
+//       />
+//       <TextInput
+//         placeholder='Enter Password'
+//         style={styles.input}
+//         secureTextEntry={true}
+//       />
+
+//       <Button
+//         title='Update Input'
+//         onPress={updateInput}
+//       />
+
+//     </View>
+//   )
+// }
+
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     padding: 16
+//   },
+//   input: {
+//     borderWidth: 1,
+//     borderColor: 'skyblue',
+//     margin: 15,
+//     padding: 10,
+//     borderRadius: 5
+//   }
+// })
+
+// export default App
+// }
+
+
+// async-storage in React Native
+import { View, Text, Button } from 'react-native'
 import React from 'react'
-import { useRef } from 'react';
-import { Colors } from 'react-native/Libraries/NewAppScreen';
+import AsyncStorage from '@react-native-async-storage/async-storage'
+import { useState } from 'react';
 
 const App = () => {
 
-  const input = useRef();
+  const [user, setUser] = useState('');
 
-  const updateInput = () => {
-    console.warn("call");
-    input.current.focus();
-    input.current.setNativeProps({
-      color:'red',
-      fontSize:20
-    })
+
+  const setData = async () => {
+    await AsyncStorage.setItem("name", "navyum")
+  }
+
+  const getData = async () => {
+    const name = await AsyncStorage.getItem("name")
+    // console.log(name)
+    setUser(name)
+  }
+
+  const removeData = async () => {
+    await AsyncStorage.removeItem("name")
+    setUser('')
   }
 
   return (
-    <View>
-      <TextInput
-        ref={input}
-        placeholder='Enter Name'
-        style={styles.input}
-      />
-      <TextInput
-        placeholder='Enter Password'
-        style={styles.input}
-        secureTextEntry={true}
+    <View style={{marginTop:100, marginLeft:30}}>
+      <Text style={{fontSize:30}}>Async-storage in React Native : {user}</Text>
+
+      <Button 
+        title='Set Data'
+        onPress={setData}
       />
 
-      <Button
-        title='Update Input'
-        onPress={updateInput}
+      <Button 
+        title='Get Data'
+        onPress={getData}
       />
 
+      <Button 
+        title='Remove Data'
+        onPress={removeData}
+      />
     </View>
   )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: 16
-  },
-  input: {
-    borderWidth: 1,
-    borderColor: 'skyblue',
-    margin: 15,
-    padding: 10,
-    borderRadius: 5
-  }
-})
 
 export default App
