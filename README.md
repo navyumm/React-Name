@@ -598,5 +598,18 @@ Question : Can we use life Cycle in functional and Class Components
 
 
 
+## Ref in React-Native
+
+* What is ref?
+  * Ref ek component ka refrence hota hai, jiske paas component ke saari props hoti hai
+* How to use ref?
+  * 1. First of all, import useRef from react.
+  * 2. Then, create a variable and assign useRef() to it.
+  * 3. Now, use this variable in the component.
+* Focus with ref.
+* Update Style with ref.
+
+
+
 
 
