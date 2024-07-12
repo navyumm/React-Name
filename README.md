@@ -610,6 +610,19 @@ Question : Can we use life Cycle in functional and Class Components
 * Update Style with ref.
 
 
+----------------------------------------------------
+----------------------------------------------------
+
+
+## Change Android App Icon
+
+* Generate Icons.
+* Replace old Icons.
+* Make the App build again.
+
+
+-- koi bhi online app icon se icon genrate karwa lo (easyappicon) or fir uske sbhi folders ko project me android ke section me src -> main -> res me jakar folders paste kardo.
+
 
 
 
