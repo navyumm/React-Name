@@ -2169,51 +2169,153 @@
 
 
 // async-storage in React Native
-import { View, Text, Button } from 'react-native'
-import React from 'react'
-import AsyncStorage from '@react-native-async-storage/async-storage'
-import { useState } from 'react';
+// {
+// import { View, Text, Button } from 'react-native'
+// import React from 'react'
+// import AsyncStorage from '@react-native-async-storage/async-storage'
+// import { useState } from 'react';
 
-const App = () => {
+// const App = () => {
 
-  const [user, setUser] = useState('');
+//   const [user, setUser] = useState('');
 
 
-  const setData = async () => {
-    await AsyncStorage.setItem("name", "navyum")
-  }
+//   const setData = async () => {
+//     await AsyncStorage.setItem("name", "navyum")
+//   }
 
-  const getData = async () => {
-    const name = await AsyncStorage.getItem("name")
-    // console.log(name)
-    setUser(name)
-  }
+//   const getData = async () => {
+//     const name = await AsyncStorage.getItem("name")
+//     // console.log(name)
+//     setUser(name)
+//   }
 
-  const removeData = async () => {
-    await AsyncStorage.removeItem("name")
-    setUser('')
-  }
+//   const removeData = async () => {
+//     await AsyncStorage.removeItem("name")
+//     setUser('')
+//   }
 
-  return (
-    <View style={{marginTop:100, marginLeft:30}}>
-      <Text style={{fontSize:30}}>Async-storage in React Native : {user}</Text>
+//   return (
+//     <View style={{marginTop:100, marginLeft:30}}>
+//       <Text style={{fontSize:30}}>Async-storage in React Native : {user}</Text>
 
-      <Button 
-        title='Set Data'
-        onPress={setData}
-      />
+//       <Button 
+//         title='Set Data'
+//         onPress={setData}
+//       />
 
-      <Button 
-        title='Get Data'
-        onPress={getData}
-      />
+//       <Button 
+//         title='Get Data'
+//         onPress={getData}
+//       />
 
-      <Button 
-        title='Remove Data'
-        onPress={removeData}
-      />
-    </View>
-  )
-}
+//       <Button 
+//         title='Remove Data'
+//         onPress={removeData}
+//       />
+//     </View>
+//   )
+// }
 
-export default App
+// export default App
+// }
+
+
+// async-storage with login feature
+// {
+// import { View, Text, Button, TextInput } from 'react-native';
+// import React, { useState } from 'react';
+// import AsyncStorage from '@react-native-async-storage/async-storage';
+
+// const App = () => {
+//   const [username, setUsername] = useState('');
+//   const [password, setPassword] = useState('');
+//   const [storedUsername, setStoredUsername] = useState('');
+//   const [storedPassword, setStoredPassword] = useState('');
+
+//   const setData = async () => {
+//     try {
+//       await AsyncStorage.setItem("username", username);
+//       await AsyncStorage.setItem("password", password);
+//       console.log("Data set");
+//     } catch (error) {
+//       console.error("Error setting data", error);
+//     }
+//   };
+
+//   const getData = async () => {
+//     try {
+//       const storedUser = await AsyncStorage.getItem("username");
+//       const storedPass = await AsyncStorage.getItem("password");
+//       if (storedUser !== null && storedPass !== null) {
+//         setStoredUsername(storedUser);
+//         setStoredPassword(storedPass);
+//       }
+//       console.log("Data retrieved");
+//     } catch (error) {
+//       console.error("Error retrieving data", error);
+//     }
+//   };
+
+//   const removeData = async () => {
+//     try {
+//       await AsyncStorage.removeItem("username");
+//       await AsyncStorage.removeItem("password");
+//       setStoredUsername('');
+//       setStoredPassword('');
+//       console.log("Data removed");
+//     } catch (error) {
+//       console.error("Error removing data", error);
+//     }
+//   };
+
+//   return (
+//     <View style={{ marginTop: 100, marginLeft: 30 }}>
+//       <Text style={{ fontSize: 30 }}>Async-storage in React Native</Text>
+      
+//       <TextInput
+//         placeholder="Username"
+//         value={username}
+//         onChangeText={setUsername}
+//         style={{ height: 40, borderColor: 'gray', borderWidth: 1, marginBottom: 10 }}
+//       />
+      
+//       <TextInput
+//         placeholder="Password"
+//         value={password}
+//         onChangeText={setPassword}
+//         secureTextEntry
+//         style={{ height: 40, borderColor: 'gray', borderWidth: 1, marginBottom: 10 }}
+//       />
+      
+//       <View style={{ marginVertical: 10 }}>
+//         <Button
+//           title='Set Data'
+//           onPress={setData}
+//         />
+//       </View>
+//       <View style={{ marginVertical: 10 }}>
+//         <Button
+//           title='Get Data'
+//           onPress={getData}
+//         />
+//       </View>
+//       <View style={{ marginVertical: 10 }}>
+//         <Button
+//           title='Remove Data'
+//           onPress={removeData}
+//         />
+//       </View>
+
+//       <Text>Stored Username: {storedUsername}</Text>
+//       <Text>Stored Password: {storedPassword}</Text>
+//     </View>
+//   );
+// };
+
+// export default App;
+// }
+
+
+
+// Element Inspector in React Native

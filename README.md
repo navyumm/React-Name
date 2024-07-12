@@ -637,5 +637,59 @@ Question : Can we use life Cycle in functional and Class Components
   * set data
   * Get data
   * Revome data
+
+-- async-storage humare data ko permanently store karwane ke kaam aata hai. like: login karte waqt data save ho jata hai fir usko hum jab chaahe access kar sakte hai.
+-- hume async-storage install karne ke liye npm install @react-native-async-storage/
+
+
+
+## Element Inspector in React-Native
+
+* Use of Element Inspector
+* How to open Element Inspector
+* How to check Elements
+
+
+-------------------------------------------------
+-------------------------------------------------
+
+
+
+## Redux with React Native
+
+* Untandstand Problem Statement
+* What is Redux
+* How does redux work?
+
+
+-- Redux ka concept hum tab use me laate hai jab hume ek component se data dusre, dusre se tirse, tisre se chothe and so on. me bejhna ho.
+-- kyoki props ke sath ye sb complex ho jaata hai. kyoki props me har baar data transfer karna pdega child se parent, parent se child.
+-- yhi problem solve karti hai redux, kyoki redux ka use karne se hume baar baar data props ke through nhi bhejna hota, isme bss ek component se data redux me bhejenge, aur jaha pr data recieve karna hai udhr receive kar lenge.
+-- Also know state management library
+
   
 
+## Redux Architecture
+
+* Redux Flow
+  * View ( Components ) -> Actions -> Reducer -> Store -> View ( Components )
+* Redux and saga Flow?
+  * View ( Components ) -> Actions -> saga -> Reducer -> Store -> View ( Components )
+ 
+
+-- iska flow hum aise samjh sakte hai, like: humne jab bhi kisi component pr click karte hai toh kuch action perform hoga, Action : ye btayega ki karna kya hai, iske baad Reducer kaam pr aayega, Reducer vo kaam ko karega or Store ke paas bhej dega, aur Store sbhi data ko apne paas store rakhta hai,
+-- ab jab Store ke paas saari values hai, toh jon jon sa component Store se vo data maangega, Store usko directly provide kar dega. 
+
+--* aura saga humara jab use me aata hai, jab action me hum api ko handle karte hai. kyoki api me hum async ka use karte hai isiliye
+
+Question : Architecture and flow of Redux?
+
+
+
+## Redux Installation and File Structure
+
+* Install Redux Package
+  * redux
+  * react-redux
+  * redux-toolkit
+* Make folder and create file  
