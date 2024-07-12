@@ -614,7 +614,7 @@ Question : Can we use life Cycle in functional and Class Components
 ----------------------------------------------------
 
 
-## Change Android App Icon
+## Change Android / IOS App Icon
 
 * Generate Icons.
 * Replace old Icons.
@@ -622,6 +622,7 @@ Question : Can we use life Cycle in functional and Class Components
 
 
 -- koi bhi online app icon se icon genrate karwa lo (easyappicon) or fir uske sbhi folders ko project me android ke section me src -> main -> res me jakar folders paste kardo.
+-- for ios = ios -> yourAppName -> Image.xcassets : me jakar ios ke icon ka folder paste kar do
 
 
 
