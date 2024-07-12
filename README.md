@@ -585,3 +585,18 @@ Question : Can we use life Cycle in functional and Class Components
 * Collect data from input fields
 * Call API with PUT method
 * Close dialog and Update List
+
+
+## Search with API
+
+* Make Search box and get value.
+* Call API with search value.
+* Display search result.
+* Add Style.
+
+-- isme bss searching karne ke liye url ke sath ?q={text} likhna hai.
+
+
+
+
+
