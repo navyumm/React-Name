@@ -701,3 +701,13 @@ Question : Architecture and flow of Redux?
 * Make Shopping cart component
 * Make Header component
 * Add style to component
+
+
+## Redux Action 
+
+* Make constant file
+  * jab bhi redux ko khi bhi impliment karte hai, toh hume action or reducer ko sync me rakhna hota hai,
+  * iske liye hum ek constant file bna lete hai, jo ye btate hai, ki action se kya data aane wala hai, or uss data ka reducer kya karna hai
+* Make action function
+* Call Action on Button
+
