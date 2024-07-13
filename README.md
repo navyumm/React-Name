@@ -711,3 +711,10 @@ Question : Architecture and flow of Redux?
 * Make action function
 * Call Action on Button
 
+
+
+## Redux Reducer 
+
+* Make Reducer
+* Import and apply constant
+* Make RootReducer
