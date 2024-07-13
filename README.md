@@ -718,3 +718,11 @@ Question : Architecture and flow of Redux?
 * Make Reducer
 * Import and apply constant
 * Make RootReducer
+
+
+
+## Store and Redux Wrapper
+
+* Make Redux Store
+* Make Wrapper of Redux provider
+* Check UI
