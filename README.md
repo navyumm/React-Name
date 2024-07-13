@@ -693,3 +693,11 @@ Question : Architecture and flow of Redux?
   * react-redux
   * redux-toolkit
 * Make folder and create file  
+
+
+
+## Make UI for Redux
+
+* Make Shopping cart component
+* Make Header component
+* Add style to component

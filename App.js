@@ -2319,3 +2319,57 @@
 
 
 // Element Inspector in React Native
+
+
+
+// Make UI for Redux
+import { Button, Image, ScrollView, StyleSheet, Text, View } from 'react-native'
+import React from 'react'
+import Header from './components/Header'
+import Product from './components/Product'
+
+const App = () => {
+
+  const products = [
+    {
+      name: 'Samsung Mobile',
+      color: 'white ',
+      price: 30000,
+      image: 'https://picsum.photos/200',
+    },
+    {
+      name: 'Apple I Phone',
+      color: 'Black ',
+      price: 20000,
+      image: 'https://picsum.photos/200',
+    },
+    {
+      name: 'Chineeeseee Mobile',
+      color: 'Orange ',
+      price: 18000,
+      image: 'https://picsum.photos/200',
+    },
+  ]
+
+
+  return (
+    <View style={styles.container}>
+      <Header />
+      <ScrollView>
+      {
+        products.map((item) => <Product item={item} /> )
+      }
+      </ScrollView>
+      
+      <Text>App</Text>
+    </View>
+  )
+}
+
+export default App
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  }
+})
