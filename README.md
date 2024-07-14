@@ -726,3 +726,11 @@ Question : Architecture and flow of Redux?
 * Make Redux Store
 * Make Wrapper of Redux provider
 * Check UI
+
+
+
+## Get Redux Data
+
+* Use select hook to get data
+* Display data
+* Add style to component
