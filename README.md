@@ -748,3 +748,11 @@ Question : Architecture and flow of Redux?
 * Get add products from cart
 * Filter cart data with product List
 * Apply Remove from cart button
+
+
+
+## Remove Cart Items from Redux
+
+* Make Redux flow for Remove From Cart.
+* Remove Item from redux data.
+* Remove from cart in UI

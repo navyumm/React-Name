@@ -15,16 +15,28 @@ const Product = (props) => {
     distpatch(addToCart(item));
   }
 
+  const handleRemovefromCart = (item) => {
+    distpatch(removeFromCart(item));
+  }
+
   useEffect(() => {
     // console.warn("cartItems", cartItems);
-    if (cartItems && cartItems.length) {
-      cartItems.forEach((element) => {
-        // console.warn(element);
-        if (element.name === item.name){
-          setIsAdded(true)
-        }
-      });
-    }
+    // if (cartItems && cartItems.length) {
+    //   cartItems.forEach((element) => {
+    //     // console.warn(element);
+    //     if (element.name === item.name){
+    //       setIsAdded(true)
+    //     }
+    //   });
+    // }
+    let result = cartItems.filter(items => {
+      return items.name === item.name
+    });
+    if (result.length) {
+      setIsAdded(true)
+      }else {
+        setIsAdded(false) 
+      }
   }, [cartItems]);
 
   return (
@@ -42,7 +54,7 @@ const Product = (props) => {
         isAdded ?
         <Button
         title='Remove to Cart'
-        onPress={() => handleAddToCart(item)}
+        onPress={() => handleRemovefromCart(item)}
       />
       :
       <Button
