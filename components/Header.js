@@ -16,8 +16,8 @@ const Header = () => {
   return (
     <View style={styles.container}>
       <Text style={{ fontSize: 30, textAlign: 'right', padding: 10, borderColor: 'orange' }}>
-        <View style={{ borderColor: 'blue', borderRadius: 10, height: 40, width: 40 }}>
-          <Text>
+        <View style={{ borderColor: 'blue', borderRadius: 20, height: 40, width: 40 }}>
+          <Text style={{fontSize:30}}>
             {cartItems}
           </Text>
         </View>

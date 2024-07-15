@@ -740,3 +740,11 @@ Question : Architecture and flow of Redux?
 -- useSelector ka hum use karenge,
 -- useSelector humara aise use hoga -> useSelector((state) => state.reducer)
 -- idhr state.reducer vo hai jo humne state waali file me send kiya hai.
+
+
+
+## Remove to Cart UI
+
+* Get add products from cart
+* Filter cart data with product List
+* Apply Remove from cart button
