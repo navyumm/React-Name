@@ -734,3 +734,9 @@ Question : Architecture and flow of Redux?
 * Use select hook to get data
 * Display data
 * Add style to component
+
+-- humne jo provide ke through wrap kiya hai main file ko aur fir usme store ka sara data paas kar diya,
+-- ab store ke data ko kahi par use karne ke liye, 
+-- useSelector ka hum use karenge,
+-- useSelector humara aise use hoga -> useSelector((state) => state.reducer)
+-- idhr state.reducer vo hai jo humne state waali file me send kiya hai.
