@@ -2327,49 +2327,63 @@ import { Button, Image, ScrollView, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import Header from './components/Header'
 import Product from './components/Product'
+import { NavigationContainer } from '@react-navigation/native'
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import ProductWrapper from './components/ProductWrapper'
+import UserList from './components/UserList'
+
+const Stack = createNativeStackNavigator();
 
 const App = () => {
 
-  const products = [
-    {
-      name: 'Samsung Mobile',
-      color: 'white ',
-      price: 30000,
-      image: 'https://picsum.photos/200',
-    },
-    {
-      name: 'Apple I Phone',
-      color: 'Black ',
-      price: 20000,
-      image: 'https://picsum.photos/200',
-    },
-    {
-      name: 'Chineeeseee Mobile',
-      color: 'Orange ',
-      price: 18000,
-      image: 'https://picsum.photos/200',
-    },
-  ]
+  // const products = [
+  //   {
+  //     name: 'Samsung Mobile',
+  //     color: 'white ',
+  //     price: 30000,
+  //     image: 'https://picsum.photos/200',
+  //   },
+  //   {
+  //     name: 'Apple I Phone',
+  //     color: 'Black ',
+  //     price: 20000,
+  //     image: 'https://picsum.photos/200',
+  //   },
+  //   {
+  //     name: 'Chineeeseee Mobile',
+  //     color: 'Orange ',
+  //     price: 18000,
+  //     image: 'https://picsum.photos/200',
+  //   },
+  // ]
 
 
   return (
-    <View style={styles.container}>
-      <Header />
-      <ScrollView>
-      {
-        products.map((item) => <Product item={item} /> )
-      }
-      </ScrollView>
+    // <View style={styles.container}>
+    //   {/* <Header />
+    //   <ScrollView>
+    //   {
+    //     products.map((item) => <Product item={item} /> )
+    //   }
+    //   </ScrollView> */}
       
-      <Text>App</Text>
-    </View>
+    //   {/* <Text>App</Text> */}
+    // </View>
+
+
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name='Home' component={ProductWrapper} />
+        <Stack.Screen name='User' component={UserList} />
+      </Stack.Navigator>
+    </NavigationContainer>
   )
 }
 
 export default App
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  }
-})
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//   }
+// })

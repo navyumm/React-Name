@@ -756,3 +756,11 @@ Question : Architecture and flow of Redux?
 * Make Redux flow for Remove From Cart.
 * Remove Item from redux data.
 * Remove from cart in UI
+
+
+
+## Add React NAvigation 
+
+* Install Navigation
+* Apply React Navigation
+* Make different component for User List
