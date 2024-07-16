@@ -777,3 +777,12 @@ Question : Architecture and flow of Redux?
 -- Kyoki JS jo hai sync hai, vo code ka wait nhi karti agar humne vaha pr kuch promises vgra na lga rakhe ho 
 
 -- Toh, jab bhi hume isnme se kuch kaam karwana ya data ka use karna ho toh, vaha pr redux ke sath Saga ka use karte hai
+
+
+
+## Call Saga Function
+
+* Make Action and Call
+* Make Saga function
+* Sync Saga and Action
+* Test Function Calling
