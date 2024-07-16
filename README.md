@@ -786,3 +786,12 @@ Question : Architecture and flow of Redux?
 * Make Saga function
 * Sync Saga and Action
 * Test Function Calling
+
+
+
+## Call API in Saga
+
+* Call API in Saga function
+* Get Saga data
+* Send data saga to reducer
+* Fetch data in Component

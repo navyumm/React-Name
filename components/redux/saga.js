@@ -1,9 +1,17 @@
 import { takeEvery } from "redux-saga/effects";
-import { USER_LIST } from "./constants";
+import { SET_USER_DATA, USER_LIST } from "./constants";
 
 
 function* userList(){
-  console.warn("saga function called");
+  // console.warn("saga function called");
+  const url = "https://dummyjson.com/users";
+  let data = yield fetch(url)
+  data = yield data.json();
+  // console.warn("data in saga", data);
+  yield put({
+    type : SET_USER_DATA,
+    payload
+  })
 }
 
 function* SagaData(){   // ye hmara main function hai, jisme phle saare function call hoyenge, fir sync honge aage
