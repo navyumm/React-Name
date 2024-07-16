@@ -764,3 +764,16 @@ Question : Architecture and flow of Redux?
 * Install Navigation
 * Apply React Navigation
 * Make different component for User List
+
+
+
+## Add Saga in Redux
+
+* Install Saga
+* Make Saga file
+* Configure Saga with redux store
+
+-- Jab bhi hum Redux ka use karenge, toh waha par async data ( like : APIs ka data, promises ka data, async ya koi bohot bda logic lga rakha ho ) pr properly kaam nhi karega.
+-- Kyoki JS jo hai sync hai, vo code ka wait nhi karti agar humne vaha pr kuch promises vgra na lga rakhe ho 
+
+-- Toh, jab bhi hume isnme se kuch kaam karwana ya data ka use karna ho toh, vaha pr redux ke sath Saga ka use karte hai
