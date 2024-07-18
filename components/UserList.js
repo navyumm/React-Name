@@ -16,7 +16,10 @@ const UserList = () => {
 
   return (
     <View style={styles.container}>
-      <Text>User List screen</Text>
+      {
+        userList.length?
+        userList.map((item) => <Text style={{fontSize:18}}>name</Text>) : null
+      }
     </View>
   )
 }

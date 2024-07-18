@@ -795,3 +795,11 @@ Question : Architecture and flow of Redux?
 * Get Saga data
 * Send data saga to reducer
 * Fetch data in Component
+
+
+
+## Render data from data
+
+* Check if data is present in redux 
+* Use the map function to render list
+* Add style
